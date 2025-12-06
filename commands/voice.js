@@ -147,7 +147,7 @@ module.exports = {
         }
       });
 
-      await message.channel.send(`✅ Joined **${voiceChannel.name}** — will play intro and periodic audio.`);
+      //await message.channel.send(`✅ Joined **${voiceChannel.name}** — will play intro and periodic audio.`);
 
     } catch (err) {
       console.error('Error joining voice channel:', err);

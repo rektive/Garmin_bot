@@ -1,0 +1,4994 @@
+[
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T04:11:35.205Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T04:11:58.679Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T04:21:41.284Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T04:22:57.579Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T04:23:12.438Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T15:22:01.262Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T15:22:51.257Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T15:47:06.097Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin proceed <@&1430378208456609804> to all",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T15:47:37.295Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:13:02.108Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:13:32.849Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:15:31.231Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:16:17.085Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:16:34.508Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:20:24.079Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play i love u",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:20:36.262Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:21:21.752Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:21:35.994Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:22:22.709Z"
+  },
+  {
+    "user": "prostopotomychto",
+    "userId": "505028849289920518",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:23:10.881Z"
+  },
+  {
+    "user": "prostopotomychto",
+    "userId": "505028849289920518",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:23:44.038Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie-slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:24:18.325Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie-slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:24:21.969Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie-slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:24:22.330Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie-slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:24:22.754Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:24:27.366Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:24:32.740Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:24:39.700Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:25:19.558Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:26:19.924Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:26:39.603Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:26:41.787Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:27:45.347Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:49:04.250Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T16:49:46.211Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T19:52:17.603Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T19:55:22.590Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin setup-roles",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T19:55:28.700Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T19:55:58.895Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T19:56:06.029Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T19:56:19.183Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:23:17.633Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin play jessie slowed",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:23:55.930Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:24:21.068Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:24:51.874Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin call <@479224801324695561>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:25:03.264Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin call <@479224801324695561>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:27:19.874Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:27:56.507Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:28:28.505Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1253523799983390840>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:28:47.810Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disonnect @spiem",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-29T20:29:19.500Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-29T23:20:44.657Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:24:06.939Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play i love u",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:25:02.076Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play i love u",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:25:16.035Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play i love u",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:25:16.295Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play i love u",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:25:16.521Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:26:30.699Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:26:41.718Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play i love u",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:28:19.273Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:30:08.564Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:30:40.370Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:31:03.215Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:33:43.955Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:34:59.083Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:35:05.035Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T15:35:16.156Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:37:52.168Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:45:33.270Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:45:36.882Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:52:38.071Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:53:20.397Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:53:31.571Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:56:26.878Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play https://www.youtube.com/watch?v=0W-GOsw9y_o&list=PLwhr-ORikzmN9JECe798AI1H1KK2fJySp",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:57:17.507Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play monika",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:57:32.003Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:57:40.172Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:58:05.215Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:58:26.475Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:58:37.817Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play https://on.soundcloud.com/sk59Wx0dePUDQW9GyN",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T15:59:40.365Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:00:00.350Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Monika (East German patriotic song)",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:00:29.991Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:00:42.268Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:01:02.296Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:01:08.152Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:01:19.146Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:01:29.486Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:01:32.323Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:01:42.302Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:01:58.480Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play i love u",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:02:04.454Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:02:08.677Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:02:36.583Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:07:29.952Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:07:56.359Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock @v",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:08:42.432Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:10:36.040Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:11:16.311Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:11:20.869Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:11:25.538Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:12:34.637Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:15:33.924Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:15:34.871Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:15:35.354Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:15:35.817Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:15:40.942Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:15:48.407Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:16:04.706Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:16:05.395Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:16:09.827Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:16:14.875Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:18:32.657Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:25:41.343Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:25:49.515Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:26:05.958Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:26:09.609Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play https://on.soundcloud.com/dyBL3nPIicvaZkVHC7",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:26:58.361Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Tokyo drift",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:27:34.524Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:27:37.733Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Tokyo drift",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:27:41.199Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:27:45.750Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play interstellar",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:32:10.853Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Interstellar Main Theme - Extra Extended",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:32:35.997Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Interstellar Main Theme - Extra Extended",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:32:45.493Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:33:27.171Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:33:34.523Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Interstellar Main Theme - Extra Extended - Soundtrack By Hans Zimmer",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:34:15.223Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Interstellar Main Theme - Extra Extended - Soundtrack By Hans Zimmer",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:34:44.581Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play what comes after",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:35:35.427Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:35:43.416Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Nymph",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:35:53.163Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play SebaLazi - Nymph",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:36:23.764Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play SebaLazi - Nymph",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:36:43.826Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play SebaLazi - Nymph",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:37:02.098Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Verao Flow",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:37:53.566Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:38:02.189Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Verao Flow Super slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:38:16.763Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play miss me",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:38:33.637Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:38:38.934Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Amber Skies",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:38:46.532Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:38:50.496Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play 1-800",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:38:58.201Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play All for nothing",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:39:25.319Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:39:29.864Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play HDMI",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:39:41.088Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:39:49.781Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play NOVA",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:39:57.343Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:40:07.211Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play NOVA krezus",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:40:12.461Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play For you - Nezhdan Remix",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:40:37.314Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:41:43.677Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Dopamine",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:41:50.766Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:41:57.739Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Kish, JMANI - Dopamine",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:42:48.877Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:43:11.860Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Maneater",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:43:15.510Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Maneater - Nelly Furtado",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:44:04.106Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Maneater Nelly Furtado",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:44:19.848Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Maneater Nelly Furtado",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:44:23.022Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play https://on.soundcloud.com/HmrqpX7ytzs6f1VvaC",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:44:43.312Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:45:01.107Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Softcore",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:45:12.771Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Softcore",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:45:30.657Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play quarto de hotel",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:45:51.735Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Children",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:46:08.307Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:46:16.427Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:48:04.483Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:48:26.404Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:50:37.395Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Wicked Gamr",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:50:52.007Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Wicked Game Chris Isaak",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:51:25.960Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Amazing",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:51:36.471Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:51:40.177Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play cigarette burns",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:52:07.670Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:52:11.462Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play cigarette burns slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:53:04.038Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:53:09.704Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:53:24.074Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Ride or Die Pt. 2",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:53:34.768Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Ride or Die Pt. 2 with Villano",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:53:56.877Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:54:01.301Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Ride or Die Pt. 2 with Villano",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:54:15.357Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Ride or Die Pt. 2 with Villano",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:54:18.496Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Ride or Die Pt. 2 with Villano",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:54:21.463Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play BIOS",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:54:35.723Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play wind of change",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:55:06.879Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play wind of change",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:55:22.505Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:55:27.057Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Dancing Nihilist",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:55:41.541Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:56:05.331Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play three",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:56:24.414Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin test-system <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:56:55.873Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play club bizare",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:57:32.121Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play goth slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:57:47.873Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:57:53.136Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play goth slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:57:59.764Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play deautschland",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T16:58:21.337Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:01:23.821Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play skins",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:01:37.111Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:01:42.660Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play ASTRA",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:01:50.866Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play pussypodium",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:02:35.265Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:02:40.278Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Kuzmin Zakhar Remix",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:02:52.658Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:02:58.036Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Спокойная ночь",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:03:11.667Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Спокойная ночь",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:03:15.200Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:05:56.645Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin plaay Gata only",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:06:10.711Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Gata only",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:06:15.725Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Gata only",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:06:30.872Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Gata only",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:06:51.533Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Спокойная ночь",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:07:06.808Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T17:07:13.762Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play to forever",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T18:35:59.298Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play to forever LONOWN",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T18:36:34.774Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T18:36:45.085Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T18:37:51.213Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:11:37.800Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:12:54.472Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:13:21.923Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:16:04.610Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin disconnect",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:16:11.232Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:16:27.188Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin play Седая Ночь",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:16:37.619Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:16:50.055Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin play Седая Ночь Юрий Шатунов",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:17:18.103Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin play и снова седая ночь",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:18:01.621Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:18:52.009Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin play Моя мелодия",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:19:21.667Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-30T19:19:32.178Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-30T22:47:30.996Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-31T02:32:37.923Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-31T02:35:31.146Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-31T02:36:14.049Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-31T02:37:34.768Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-10-31T02:37:55.199Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:32:09.553Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:33:38.234Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:33:46.014Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:33:59.473Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:34:07.159Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:34:12.512Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:35:42.303Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:36:08.087Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:36:19.909Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:36:25.642Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:36:29.856Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:43:03.684Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin ban-text <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:43:33.722Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:44:14.770Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin call <@436529064774336514> and call <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:45:21.698Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:47:29.160Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:47:55.507Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T17:58:07.466Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:02:18.173Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play to forever",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:05:17.024Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:05:25.078Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play loosescrew",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:09:09.900Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play for you",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:13:26.627Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:13:33.409Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play for you nezhdan remix",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:13:42.424Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin shutdown",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:16:41.519Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin shutdown",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:17:26.414Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:19:19.510Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin shutdown",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:19:28.149Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play for you nezhdan remi",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:21:03.045Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:37:27.567Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T18:37:35.266Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T20:48:33.873Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T20:48:42.868Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-10-31T22:37:55.824Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:14:01.158Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:15:18.024Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:18:53.507Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:19:36.156Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:20:19.306Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:21:21.675Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:22:04.493Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:22:16.434Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin assign <@1430380552120172586>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:26:01.712Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:26:28.106Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin assing <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:26:29.289Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin assign @VOVA-DRIFTAVTOMOBIL",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:26:46.784Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin assign <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:27:04.057Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin unassign <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:27:05.175Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:36:15.342Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin next",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:38:30.685Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin skip",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:38:35.796Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:39:38.046Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@&1431131232317735002>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:04.017Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin otsosi Vove",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:19.833Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:23.338Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin otsosi <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:36.297Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin ban-text <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:38.063Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:38.509Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin disconnect <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:49.044Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin disconnect <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:45:56.962Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:46:13.066Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:47:13.871Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:47:33.863Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T02:50:21.231Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@801161712669687848>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:08:00.354Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:08:06.935Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:08:17.782Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:08:23.957Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:08:37.163Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:09:17.779Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:09:59.765Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin ban-text <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:11:52.757Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin ban-text <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:12:30.009Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:12:45.990Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:12:52.943Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:14:14.174Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:14:30.241Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:16:12.717Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:17:29.994Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:29:26.644Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:31:32.807Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-01T03:32:55.926Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play писи,попки,какашечки.mp3",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:08:13.447Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play писи,попки,какашечки.mp3",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:12:01.327Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play писи,попки,какашечки.mp3",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:12:31.301Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play писи,попки,какашечки.mp3",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:12:33.200Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play писи,попки,какашечки.mp3",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:15:38.530Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:55:34.752Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:55:44.719Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:55:53.897Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:58:18.128Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:58:30.615Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T01:59:32.793Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play писи,попки,какашечки.mp3",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:03:47.559Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:04:45.068Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:05:21.746Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:05:29.490Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:05:32.939Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:05:36.228Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:05:48.996Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:12:29.796Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T02:30:38.621Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Battotai -Imperial Japanese army march",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:08:54.399Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:09:04.163Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:09:35.617Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin ban-text <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:09:58.738Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:09:58.831Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:10:39.643Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:10:50.483Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:10:50.641Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin ban-next <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:11:09.479Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin text-ban <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:11:18.492Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin ban-text <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:11:35.749Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin ban-text <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:11:44.720Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:11:47.588Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:11:51.259Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:12:00.630Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:12:15.969Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:12:20.556Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:12:34.086Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:12:37.274Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:13:09.908Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:13:10.297Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:13:45.644Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:13:48.853Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:14:06.766Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:14:09.763Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:14:17.367Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:14:24.837Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:14:44.062Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin mute <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:15:05.362Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:15:06.783Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:15:28.217Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:15:37.286Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:13.236Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:21.603Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock @ n",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:21.760Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:28.182Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:33.344Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:34.572Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:34.819Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:35.220Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:35.796Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:36.108Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock @",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:36.387Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock @",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:36.825Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:16:45.558Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:17:07.656Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:17:08.113Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@436529064774336514>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T03:17:08.598Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T18:21:16.981Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T18:42:41.341Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin join <@479224801324695561>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:13:36.298Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin join <@479224801324695561>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:14:11.323Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@1430380552120172586>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:15:11.314Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:15:46.379Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@801161712669687848>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:15:58.675Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin call <@1430380552120172586>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:16:07.412Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Убили Негра",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:16:53.029Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Убили Негра",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:17:06.725Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:17:19.016Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin test-system",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:17:43.097Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:18:43.350Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Убили Негра",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:19:25.002Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:19:42.108Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play запрещенные барабанщики",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:20:00.226Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Jessie",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:43:58.216Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:44:11.049Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Писи,попки,какашечки.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:44:38.354Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Писи,попки,какашечки.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:44:56.807Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Писи,попки,какашечки.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:53:23.077Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:54:14.423Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Писи,попки,какашечки.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:59:29.374Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T19:59:58.632Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin mute <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T20:00:11.975Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T20:00:43.590Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play и снова седая ночь",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T20:02:00.447Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T20:02:19.454Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Четыре унции.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T20:03:20.167Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T20:04:06.226Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T21:25:46.214Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Писи,попки,какашечки.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-02T21:53:39.073Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T01:07:26.844Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T01:07:40.931Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T01:09:02.526Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T01:09:10.683Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T01:09:13.868Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T02:09:48.441Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T13:19:57.630Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T13:20:16.905Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-03T13:53:19.007Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T01:20:14.428Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T01:20:23.345Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T01:28:51.564Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T01:32:01.986Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin join <@479224801324695561>",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T01:32:12.063Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmini call <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:02:05.441Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin call <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:02:14.334Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin call <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:04:50.616Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin call <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:04:50.646Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:11:14.931Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:12:35.477Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:27:32.756Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:27:56.119Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:33:58.889Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:39:03.328Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:39:21.756Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play toca toca",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T03:47:27.941Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T05:37:18.629Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin ban-text <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T05:37:31.371Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T05:37:41.128Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin ban-text <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T05:38:06.023Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T05:38:17.000Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-08T05:39:49.138Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin]",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T01:57:51.064Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T01:57:53.381Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie slowed",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T01:59:44.504Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T01:59:51.042Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T01:59:57.401Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@801161712669687848>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T02:00:40.758Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin call <@801161712669687848>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T02:00:53.998Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play nocturne",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:02:33.284Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play onimanxd struggle",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:04:01.347Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:04:09.765Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:04:50.790Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:05:46.290Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:47:55.965Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play onimanxd struggle",
+    "channel": "music",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:49:03.669Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play erika",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:16.721Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin next",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:21.538Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:28.210Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:32.031Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play Erekia",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:38.163Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:45.847Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play Erika",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:50.882Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:50:59.200Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play Erika german song",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:51:06.618Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:51:12.008Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:51:24.775Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:51:52.891Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:52:02.517Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Battotai- Imperial Japanese Army March",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:52:55.433Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Japanese Army March",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:53:16.280Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Battotai",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:53:28.026Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play japanese kamikadze sound",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:53:31.085Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:53:34.533Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:53:40.687Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin ban-text <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:53:45.244Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Battotai",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:53:52.505Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:54:36.100Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:54:37.727Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:54:49.378Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin call <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:57:32.954Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:57:42.371Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T03:59:40.492Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T04:51:22.626Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@801161712669687848>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T04:52:49.000Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@680831332187635730>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T04:52:58.707Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin ban-text <@479224801324695561>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T04:54:13.443Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T04:54:39.174Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@801161712669687848>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T04:54:50.005Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@801161712669687848>",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T04:55:06.120Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T05:04:01.106Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T05:04:32.211Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T05:05:11.040Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-09T05:05:18.446Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T17:58:08.497Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T17:59:12.437Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T17:59:24.787Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:01:57.234Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:11:13.537Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:11:28.915Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:13:41.734Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:15:47.370Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play children",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:19:21.994Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play to forever moonbeam remix",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:20:41.142Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin join <@479224801324695561> \\",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:26:06.115Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:42:56.026Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:43:22.687Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:43:30.409Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:47:20.039Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:49:45.363Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-13T18:56:14.975Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin play jessie",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T20:16:26.787Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T20:18:13.470Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin play Jessie",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T20:18:39.615Z"
+  },
+  {
+    "user": "reaktivka228_39382",
+    "userId": "1253523799983390840",
+    "command": "!Garmin stop",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T20:19:36.619Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T21:08:13.030Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T21:09:08.471Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@1430380552120172586>",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T21:09:42.367Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "основной",
+    "guild": "Сервер 🤡Adell_NEDAM🤡",
+    "timestamp": "2025-11-13T21:10:00.946Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T02:39:59.121Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T02:41:33.640Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T02:41:36.768Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T16:27:27.775Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T16:30:26.195Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T17:47:42.926Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T17:50:39.707Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T17:52:43.727Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T17:56:55.452Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T17:59:35.211Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:07:05.849Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:08:00.380Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:08:29.979Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:09:00.791Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play AKAI",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:09:19.149Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:09:31.508Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play VEKI VEKI",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:10:00.608Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play AKAI",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:10:20.466Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play illusion",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:10:41.354Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:11:00.988Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:15:32.662Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:20:18.279Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:20:39.720Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:20:43.444Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:20:50.923Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:24:30.425Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:27:27.167Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:27:41.270Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:49:38.525Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:55:28.604Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:58:43.606Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T18:58:53.679Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:04:25.864Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@680831332187635730> \\",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:05:13.318Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin disconnect <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:05:39.526Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:06:14.989Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:07:05.884Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:08:04.811Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:08:23.364Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin ban-text <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:08:33.059Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin unlock <@680831332187635730>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:08:43.517Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin disconnect <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:11:06.210Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-14T19:12:24.765Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:16:24.687Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin reminders <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:19:11.693Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin erase-schedule <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:19:23.380Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin reminders <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:19:29.219Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:19:32.798Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin reminders <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:20:11.652Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin erase-schedules <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:28:36.522Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin erase-schedule <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:28:42.248Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin erase-schedule <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:28:45.789Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin erase-schedule <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:28:46.940Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:28:50.341Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T01:52:27.487Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T02:00:50.645Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin kaboom <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T02:03:09.660Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T02:04:29.726Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T02:13:08.662Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T02:14:06.245Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin reminders <@1430380552120172586>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T02:14:22.450Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T02:14:47.579Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin call <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:11:11.904Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin join",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:47:49.466Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin join <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:47:54.439Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play https://www.youtube.com/watch?v=tVA7u5jGubY",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:48:20.017Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play https://www.youtube.com/watch?v=tVA7u5jGubY",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:48:32.627Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:49:16.503Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:49:34.253Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play https://www.youtube.com/watch?v=tVA7u5jGubY",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:50:46.857Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:50:56.770Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:53:32.347Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin lock",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:55:36.721Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin lock <@479224801324695561>",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:55:46.196Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:59:02.037Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T03:59:58.724Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play https://open.spotify.com/track/3qNVA3AvB0zZBvksHfZv8D?si=fedeeaa108d54eb2",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:00:34.950Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin stop",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:05:22.418Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin во мне давно уже метро",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:05:31.858Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play Tom Platz",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:05:46.713Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play tom Platz",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:06:19.452Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play https://www.youtube.com/watch?v=LyEqj8mC7iQ",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:08:19.984Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play я роняю запад\\",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:10:25.782Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play Heroes Z\" - Donbass War Song",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:12:57.006Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play я роняю запад\\",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:14:44.545Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Писи,попки,какашечки.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:17:22.269Z"
+  },
+  {
+    "user": "nikitosik0277",
+    "userId": "436529064774336514",
+    "command": "!Garmin play Писи,попки,какашечки.mp3",
+    "channel": "общее",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:21:24.371Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play степан гіга",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:26:21.165Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin skip",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:26:41.161Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Jessie",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:26:47.811Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin play Молода Вовчиця",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:27:30.053Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin play Смарагдове небо",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:28:30.133Z"
+  },
+  {
+    "user": "v0lod1a",
+    "userId": "680831332187635730",
+    "command": "!Garmin",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T04:45:57.008Z"
+  },
+  {
+    "user": "terka6344",
+    "userId": "479224801324695561",
+    "command": "!Garmin emergency",
+    "channel": "settings",
+    "guild": "Aimboters228",
+    "timestamp": "2025-11-15T06:50:08.357Z"
+  }
+]
