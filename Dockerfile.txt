@@ -1,20 +1,19 @@
-# Use a Node.js image
-FROM node:18
+FROM node:20
 
-# Install FFmpeg (required for music)
+# Install FFmpeg
 RUN apt-get update && apt-get install -y ffmpeg
 
-# Create working directory
+# Set working directory inside container
 WORKDIR /app
 
-# Copy package files first
+# Copy package files first (helps caching)
 COPY package*.json ./
 
-# Install dependencies
+# Install node modules
 RUN npm install
 
-# Copy the rest of your bot files
+# Copy the rest of your project
 COPY . .
 
-# Start the bot
+# Start your bot
 CMD ["node", "index.js"]
