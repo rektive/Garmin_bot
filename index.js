@@ -10,6 +10,7 @@ const { SpotifyPlugin } = require('@distube/spotify');
 const { SoundCloudPlugin } = require('@distube/soundcloud');
 
 const health = require('./commands/health.js');
+const restartCommand = require('./commands/restart.js');
 const healthButton = require('./commands/health_button.js');
 const levelSystem = require('./commands/level_system.js');
 const moreButton = require('./commands/more_button.js');
@@ -244,34 +245,55 @@ client.distube = new DisTube(client, {
 // DisTube Events
 client.distube
   .on('playSong', async (queue, song) => {
-    // Define the buttons for the control panel
+    // --- 1. DETERMINE CURRENT BUTTON STATE ---
+    // Check if loop or shuffle is active to set the initial button label
+    const isLoop = queue.repeatMode === 2;
+    const isShuffle = queue.shuffle;
+
+    let modeLabel = '➡️ Order';
+    let modeStyle = ButtonStyle.Secondary;
+
+    if (isLoop) {
+        modeLabel = '🔁 Loop';
+        modeStyle = ButtonStyle.Success; // Green
+    } else if (isShuffle) {
+        modeLabel = '🔀 Shuffle';
+        modeStyle = ButtonStyle.Success; // Green
+    }
+
+    // --- 2. DEFINE BUTTONS ---
     const row1 = new ActionRowBuilder()
       .addComponents(
         new ButtonBuilder()
           .setCustomId('distube_pause_resume')
-          .setLabel('⏸️ Pause / ▶️ Resume')
+          .setLabel('⏸️ / ▶️') // Shortened to fit nicely
           .setStyle(ButtonStyle.Secondary),
         new ButtonBuilder()
           .setCustomId('distube_skip')
-          .setLabel('⏭️ Skip')
+          .setLabel('⏭️')
           .setStyle(ButtonStyle.Primary),
         new ButtonBuilder()
           .setCustomId('distube_stop')
-          .setLabel('⏹️ Stop')
-          .setStyle(ButtonStyle.Danger)
+          .setLabel('⏹️')
+          .setStyle(ButtonStyle.Danger),
+        // --- NEW MODE BUTTON ---
+        new ButtonBuilder()
+          .setCustomId('distube_mode')
+          .setLabel(modeLabel) 
+          .setStyle(modeStyle)
       );
 
     const row2 = new ActionRowBuilder()
-        .addComponents(
-            new ButtonBuilder()
-                .setCustomId('distube_queue')
-                .setLabel('Show Queue')
-                .setStyle(ButtonStyle.Secondary),
-            new ButtonBuilder()
-                .setCustomId('distube_filters')
-                .setLabel('🎧 Filters')
-                .setStyle(ButtonStyle.Secondary)
-        );
+      .addComponents(
+        new ButtonBuilder()
+          .setCustomId('distube_queue')
+          .setLabel('Show Queue')
+          .setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder()
+          .setCustomId('distube_filters')
+          .setLabel('🎧 Filters')
+          .setStyle(ButtonStyle.Secondary)
+      );
 
     // Create the "Now Playing" Embed
     const embed = new EmbedBuilder()
@@ -418,6 +440,12 @@ for (const file of commandFiles) {
 const unauthorizedCount = new Map();
 
 client.on('ready', () => {
+    if (client.isReadyInitialized) {
+        console.log('Bot reconnected (Soft Restart). Skipping initialization.');
+        return; 
+    }
+    client.isReadyInitialized = true; // Mark as initialized
+
     console.log(`Logged in as ${client.user.tag}`);
     levelSystem.init(client);
     // Auto-check and create roles for all guilds
@@ -478,9 +506,53 @@ client.on('guildCreate', async (guild) => {
 });
 //////////////////////////////////////
 //////////////////////////////////////
-client.on('voiceStateUpdate', (oldState, newState) => {
-    // This function will check if a user is at 0 HP and kick them from VC
+client.on('voiceStateUpdate', async (oldState, newState) => {
+    // 1. Health System Check (Your existing logic)
     health.checkVoiceJoin(newState);
+
+    // 2. Temp Channel Cleanup Logic
+    // We only care if someone LEFT a channel (oldState.channel is defined)
+    if (oldState.channel) {
+        const channelId = oldState.channel.id;
+        const TEMP_FILE = path.join(__dirname, 'temp_channels.json');
+        
+        // Check if this channel is in our "temp_channels.json" list
+        let tempChannels = [];
+        try {
+            if (fs.existsSync(TEMP_FILE)) {
+                tempChannels = JSON.parse(fs.readFileSync(TEMP_FILE, 'utf8'));
+            }
+        } catch (e) { console.error('Error reading temp_channels.json:', e); }
+
+        if (tempChannels.includes(channelId)) {
+            // Check if it is now EMPTY
+            if (oldState.channel.members.size === 0) {
+                
+                // Wait 15 seconds
+                setTimeout(async () => {
+                    // Fetch the channel again to make sure it's STILL empty
+                    // (Someone might have joined back in those 15 seconds)
+                    try {
+                        const channel = await oldState.guild.channels.fetch(channelId).catch(() => null);
+                        if (channel && channel.members.size === 0) {
+                            await channel.delete();
+                            
+                            // Remove from JSON
+                            // We re-read the file just to be safe
+                            let currentTemps = [];
+                            if (fs.existsSync(TEMP_FILE)) {
+                                currentTemps = JSON.parse(fs.readFileSync(TEMP_FILE, 'utf8'));
+                            }
+                            const newIds = currentTemps.filter(id => id !== channelId);
+                            fs.writeFileSync(TEMP_FILE, JSON.stringify(newIds, null, 2));
+                        }
+                    } catch (err) {
+                        console.error('Error deleting temp channel:', err);
+                    }
+                }, 15000); // 15 seconds delay
+            }
+        }
+    }
 });
 //////////////////////////////////////
 function bumpUnauthorized(member) {
@@ -610,6 +682,11 @@ if (sysShutdownCommand && sysShutdownCommand.canHandle(message, PREFIX)) {
     await sysShutdownCommand.handle(message, PREFIX);
     return;
 }
+
+if (command === 'restart') {
+        await restartCommand.execute(message, args);
+        return;
+    }
 
 
     if (isBlockedInDevMode(member, hasDev, message, command)) return;
@@ -873,6 +950,7 @@ if (!command || command === 'garmin' || command === 'help') {
         }
     }
 
+    
 
     // Disconnect
     else if (command === 'disconnect') {
@@ -1552,10 +1630,50 @@ else if (command === 'kaboom') {
 // Handle button interactions (like Roulette button)
 client.on('interactionCreate', async (interaction) => {
     try {
+        // Handle Slash Commands (like /yt)
+        if (interaction.isChatInputCommand()) {
+            
+            // 1. Existing YT Command
+            if (interaction.commandName === 'yt') {
+                const ytCommand = require('./commands/yt.js');
+                await ytCommand.execute(interaction);
+            }
 
+            // create_voice slash command
+            if (interaction.commandName === 'voice') {
+                const voiceCommand = require('./commands/create_voice.js'); // <-- The require happens HERE
+                await voiceCommand.execute(interaction);
+            }
+            // Limit manager slash command
+            if (interaction.commandName === 'room') {
+                const roomCommand = require('./commands/room.js');
+                await roomCommand.execute(interaction);
+            }
+            // Oblava slash command
+            if (interaction.commandName === 'oblava') {
+                const oblavaCommand = require('./commands/oblava.js');
+                await oblavaCommand.execute(interaction);
+            }
+            // Chicken slash command
+            if (interaction.commandName === 'chicken') {
+                const chikenCommand = require('./commands/chicken.js');
+                await chikenCommand.execute(interaction);
+            }
+
+            return; // Stop processing buttons
+        }
+        
         if (await moreButton.handleInteraction(interaction)) return;
         if (await profileButton.handleInteraction(client, interaction)) return;
         if (await healthButton.handleInteraction(client, interaction)) return;
+        // yt
+        if (interaction.isChatInputCommand()) {
+            if (interaction.commandName === 'yt') {
+                const ytCommand = require('./commands/yt.js');
+                await ytCommand.execute(interaction);
+            }
+            return; // Stop processing other interaction types
+        }
 
         // --- MUSIC CONTROL BUTTON HANDLER ---
         // This handles the "Pause", "Skip", "Stop", "Queue", and "Filters" buttons
@@ -1583,6 +1701,30 @@ client.on('interactionCreate', async (interaction) => {
                         await interaction.deferUpdate();
                     break;
 
+                // --- 👇 UPDATED SKIP LOGIC 👇 ---
+                case 'distube_skip':
+                    if (queue.songs.length <= 1) {
+                        queue.stop(); // Stop if no more songs
+                    } else {
+                        // If Shuffle is ON, jump to a random song
+                        if (queue.shuffle) {
+                            try {
+                                // Pick a random number between 1 (next song) and the last song
+                                const randomJump = Math.floor(Math.random() * (queue.songs.length - 1)) + 1;
+                                await queue.jump(randomJump);
+                            } catch (err) {
+                                // If calculation fails (rare), fallback to normal skip
+                                await queue.skip();
+                            }
+                        } else {
+                            // If Order or Loop is ON, just play the next one in line
+                            await queue.skip();
+                        }
+                    }
+                    await interaction.deferUpdate();
+                    break;
+                // --- END OF UPDATE ---
+
                 case 'distube_skip':
                     if (queue.songs.length <= 1) {
                         queue.stop(); // Stop if no more songs
@@ -1596,7 +1738,57 @@ client.on('interactionCreate', async (interaction) => {
                     queue.stop();
                         await interaction.deferUpdate();
                     break;
-                    
+                
+                //////////////////////////////
+                // --- 👇 NEW MODE BUTTON LOGIC 👇 ---
+                case 'distube_mode':
+                    // Cycle: Order -> Shuffle -> Loop -> Order
+                    
+                    // 1. Get the current label from the button that was clicked
+                    const currentLabel = interaction.component.label;
+                    
+                    let nextLabel = '';
+                    let nextStyle = ButtonStyle.Secondary;
+
+                    if (currentLabel.includes('Order')) {
+                        // Current: ORDER -> Go to SHUFFLE
+                        await queue.shuffle(); 
+                        nextLabel = '🔀 Shuffle';
+                        nextStyle = ButtonStyle.Success; // Green
+                    } 
+                    else if (currentLabel.includes('Shuffle')) {
+                        // Current: SHUFFLE -> Go to LOOP
+                        await queue.shuffle(); // Toggle Shuffle OFF
+                        await queue.setRepeatMode(2); // 2 = Loop Queue
+                        nextLabel = '🔁 Loop';
+                        nextStyle = ButtonStyle.Success; // Green
+                    } 
+                    else {
+                        // Current: LOOP -> Go to ORDER
+                        await queue.setRepeatMode(0); // 0 = Disabled
+                        nextLabel = '➡️ Order';
+                        nextStyle = ButtonStyle.Secondary; // Grey
+                    }
+
+                    // 2. Update the button UI
+                    const row1 = ActionRowBuilder.from(interaction.message.components[0]);
+                    const row2 = ActionRowBuilder.from(interaction.message.components[1]); // Keep row 2
+                    
+                    // Find the mode button in row 1
+                    const buttonIndex = row1.components.findIndex(c => c.data.custom_id === 'distube_mode');
+                    
+                    if (buttonIndex !== -1) {
+                        row1.components[buttonIndex].setLabel(nextLabel);
+                        row1.components[buttonIndex].setStyle(nextStyle);
+                        
+                        // 3. Silently update the message (No reply, no pop-up)
+                        await interaction.update({ components: [row1, row2] });
+                    } else {
+                        // Fallback if button isn't found
+                        await interaction.deferUpdate();
+                    }
+                    break;
+                // --- END OF NEW MODE BUTTON LOGIC ---
                 case 'distube_queue':
                     const songList = queue.songs
                         .map((song, i) => `**${i}.** [${song.name}](${song.url}) - \`${song.formattedDuration}\``)
