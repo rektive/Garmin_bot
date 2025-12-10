@@ -1660,6 +1660,11 @@ client.on('interactionCreate', async (interaction) => {
                 await chikenCommand.execute(interaction);
             }
 
+            if(interaction.commandName === 'rename') {
+                const renameCommand = require('./commands/rename.js');
+                await renameCommand.execute(interaction);
+            }
+
             return; // Stop processing buttons
         }
         

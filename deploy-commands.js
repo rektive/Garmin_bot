@@ -1,13 +1,93 @@
+// const { REST, Routes, SlashCommandBuilder } = require('discord.js');
+// require('dotenv').config();
+
+// const commands = [
+//     // 1. /yt
+//     new SlashCommandBuilder()
+//         .setName('yt')
+//         .setDescription('Starts a YouTube Watch Together activity.'),
+    
+//     // 2. /voice
+//     new SlashCommandBuilder()
+//         .setName('voice')
+//         .setDescription('Creates a temporary voice channel.')
+//         .addStringOption(option => 
+//             option.setName('name')
+//                 .setDescription('The name of the channel'))
+//         .addIntegerOption(option => 
+//             option.setName('limit')
+//                 .setDescription('Max users (0 for unlimited)')),
+
+//     // 3. /room
+//     new SlashCommandBuilder()
+//         .setName('room')
+//         .setDescription('Manage your current voice room')
+//         .addSubcommand(subcommand =>
+//             subcommand.setName('limit').setDescription('Set user limit')
+//                 .addIntegerOption(option => option.setName('number').setDescription('Limit').setRequired(true)))
+//         .addSubcommand(subcommand =>
+//             subcommand.setName('remove').setDescription('Delete this room')),
+
+//     // 4. /oblava
+//     new SlashCommandBuilder()
+//         .setName('oblava')
+//         .setDescription('Cleans up Garmin messages.'),
+
+//     // 5. /chicken (FIXED SPELLING)
+//     new SlashCommandBuilder()
+//         .setName('chicken') 
+//         .setDescription('Deploys the chicken.'),
+
+//     // 6. /rename
+//     new SlashCommandBuilder()
+//         .setName('rename')
+//         .setDescription('Renames your current voice channel')
+//         .addStringOption(option => 
+//             option.setName('name')
+//                 .setDescription('The new name for the channel')
+//                 .setRequired(true)
+//                 .setMaxLength(100)),
+// ]
+// .map(command => command.toJSON());
+
+// const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
+
+// (async () => {
+//     try {
+//         console.log(`📦 Started refreshing ${commands.length} application (/) commands GLOBALLY.`);
+
+//         const CLIENT_ID = process.env.CLIENT_ID; 
+//         if (!CLIENT_ID) {
+//             console.error('❌ Error: CLIENT_ID is missing from .env file.');
+//             return;
+//         }
+
+//         // Send to Discord (Global)
+//         const data = await rest.put(
+//             Routes.applicationCommands(CLIENT_ID),
+//             { body: commands },
+//         );
+
+//         console.log(`✅ Successfully reloaded ${data.length} commands.`);
+//         console.log('🕒 Global commands take up to 1 HOUR to appear on other servers.');
+//         console.log('👉 Try restarting your Discord app (Ctrl+R) to force a cache refresh.');
+//     } catch (error) {
+//         console.error(error);
+//     }
+// })();
+
+
 const { REST, Routes, SlashCommandBuilder } = require('discord.js');
 require('dotenv').config();
 
 const commands = [
-    // Open Youtube slash command
+    // 1. /yt
     new SlashCommandBuilder()
         .setName('yt')
-        .setDescription('Starts a YouTube Watch Together activity in your voice channel.'),
-        // Create Voice channel slash command
-        new SlashCommandBuilder()
+        .setDescription('Starts a YouTube Watch Together activity.'),
+    
+    // 2. /voice
+    new SlashCommandBuilder()
         .setName('voice')
         .setDescription('Creates a temporary voice channel.')
         .addStringOption(option => 
@@ -15,33 +95,37 @@ const commands = [
                 .setDescription('The name of the channel'))
         .addIntegerOption(option => 
             option.setName('limit')
-                .setDescription('Max number of users (0 for unlimited)')),
-        // Limit manager slash command
-        new SlashCommandBuilder()
+                .setDescription('Max users (0 for unlimited)')),
+
+    // 3. /room
+    new SlashCommandBuilder()
         .setName('room')
         .setDescription('Manage your current voice room')
         .addSubcommand(subcommand =>
-            subcommand
-                .setName('limit')
-                .setDescription('Set the max number of users for this room')
-                .addIntegerOption(option => 
-                    option.setName('number')
-                        .setDescription('The user limit (0 = unlimited)')
-                        .setRequired(true)
-                        .setMinValue(0)
-                        .setMaxValue(99)))
+            subcommand.setName('limit').setDescription('Set user limit')
+                .addIntegerOption(option => option.setName('number').setDescription('Limit').setRequired(true)))
         .addSubcommand(subcommand =>
-            subcommand
-                .setName('remove')
-                .setDescription('Delete this room (Owner/Admin only)')),
+            subcommand.setName('remove').setDescription('Delete this room')),
 
-        new SlashCommandBuilder()
+    // 4. /oblava
+    new SlashCommandBuilder()
         .setName('oblava')
-        .setDescription('Cleans up Garmin messages and commands.'),
+        .setDescription('Cleans up Garmin messages.'),
 
-        new SlashCommandBuilder()
+    // 5. /chicken
+    new SlashCommandBuilder()
         .setName('chicken')
-        .setDescription('Joins, plays a sound, and leaves.'),
+        .setDescription('Deploys the chicken.'),
+
+    // 6. /rename
+    new SlashCommandBuilder()
+        .setName('rename')
+        .setDescription('Renames your current voice channel')
+        .addStringOption(option => 
+            option.setName('name')
+                .setDescription('The new name for the channel')
+                .setRequired(true)
+                .setMaxLength(100)),
 ]
 .map(command => command.toJSON());
 
@@ -49,23 +133,24 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
 (async () => {
     try {
-        console.log('Started refreshing application (/) commands.');
+        console.log(`📦 Started refreshing ${commands.length} application (/) commands for GUILD.`);
 
         const CLIENT_ID = process.env.CLIENT_ID; 
-        const GUILD_ID = process.env.GUILD_ID; // <--- 1. We get this from .env now
+        const GUILD_ID = process.env.GUILD_ID; // Must be in your .env file
 
         if (!CLIENT_ID || !GUILD_ID) {
-            console.error('Error: CLIENT_ID or GUILD_ID is missing from .env file.');
+            console.error('❌ Error: CLIENT_ID or GUILD_ID is missing from .env file.');
             return;
         }
 
-        await rest.put(
-            // 2. This creates the command specifically for your server (Instant update)
+        // Send to Discord (Guild specific = Instant)
+        const data = await rest.put(
             Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID),
             { body: commands },
         );
 
-        console.log('Successfully reloaded application (/) commands.');
+        console.log(`✅ Successfully reloaded ${data.length} commands for server ${GUILD_ID}.`);
+        console.log('⚡ Commands should appear INSTANTLY.');
     } catch (error) {
         console.error(error);
     }
