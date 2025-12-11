@@ -1,68 +1,10 @@
-// const { getVoiceConnection } = require('@discordjs/voice'); // <-- Import this
-// const levelSystem = require('./level_system.js');
-// const health = require('./health.js');
-
-// module.exports = {
-//     name: 'restart',
-//     description: 'Soft resets the bot connection and cleans up voice states.',
-    
-//     execute: async (message, args) => {
-//         const OWNER_ID = '479224801324695561'; // Your ID
-
-//         if (message.author.id !== OWNER_ID) {
-//             return message.reply('⛔ Access Denied. Only the owner can restart Garmin.');
-//         }
-
-//         await message.reply('🔄 Performing soft reset... (Cleaning voice connections & reconnecting)');
-//         console.log(`Soft reset initiated by ${message.author.tag}`);
-
-//         // 1. Save Data
-//         try {
-//             levelSystem.save(message.client);
-//             health.save(message.client);
-//             console.log('Data saved before reset.');
-//         } catch (err) {
-//             console.error('Failed to save data during reset:', err);
-//         }
-
-//         // 2. CLEANUP VOICE CONNECTIONS (The Fix)
-//         // We must destroy all existing voice connections before restarting the client.
-//         // Otherwise, the new client sees "zombie" connections it can't control.
-//         console.log('Cleaning up voice connections...');
-//         message.client.guilds.cache.forEach(guild => {
-//             const connection = getVoiceConnection(guild.id);
-//             if (connection) {
-//                 console.log(`Destroying voice connection in guild: ${guild.name}`);
-//                 connection.destroy(); // Forcefully disconnect
-//             }
-//         });
-
-//         // 3. Refresh the connection
-//         // We use a small timeout to let the voice connections finish closing
-//         setTimeout(async () => {
-//             try {
-//                 await message.client.destroy();
-                
-//                 console.log('Client destroyed. Reconnecting...');
-                
-//                 await message.client.login(process.env.TOKEN);
-                
-//                 console.log('Soft reset complete. Bot is back online.');
-//             } catch (err) {
-//                 console.error('Failed to reconnect:', err);
-//             }
-//         }, 1000); // 1 second delay to ensure clean disconnects
-//     }
-// };
-
 const { getVoiceConnection } = require('@discordjs/voice');
 const levelSystem = require('./level_system.js');
 const health = require('./health.js');
-const { spawn } = require('child_process'); // <-- 1. Import this for the "Hard" restart
 
 module.exports = {
     name: 'restart',
-    description: 'Hard restarts the bot process to fix bugs and ghosts.',
+    description: 'Smart restart: Soft reset on PC, Hard reset on Cloud.',
     
     execute: async (message, args) => {
         const OWNER_ID = '479224801324695561';
@@ -71,10 +13,10 @@ module.exports = {
             return message.reply('⛔ Access Denied. Only the owner can restart Garmin.');
         }
 
-        await message.reply('🔄 **REBOOTING SYSTEM:** Saving data, clearing voice, and spawning a fresh process...');
-        console.log(`Hard restart initiated by ${message.author.tag}`);
+        await message.reply('🔄 **SYSTEM REBOOT:** Saving data and restarting services...');
+        console.log(`Restart initiated by ${message.author.tag}`);
 
-        // 2. Save Data (Keep this!)
+        // 1. Save Data (Always important)
         try {
             levelSystem.save(message.client);
             health.save(message.client);
@@ -83,28 +25,56 @@ module.exports = {
             console.error('Failed to save data:', err);
         }
 
-        // 3. Clean up Voice (Keep this to prevent "Voice Already Created" errors!)
+        // 2. Clean up Voice (Always important)
         console.log('Cleaning up voice connections...');
         message.client.guilds.cache.forEach(guild => {
-            const connection = getVoiceConnection(guild.id);
-            if (connection) {
-                console.log(`Destroying voice connection in guild: ${guild.name}`);
-                connection.destroy();
+            try {
+                const connection = getVoiceConnection(guild.id);
+                if (connection) {
+                    console.log(`Destroying voice connection in guild: ${guild.name}`);
+                    connection.destroy();
+                }
+            } catch (error) {
+                console.error(`Error clearing voice for guild ${guild.id}:`, error);
             }
         });
 
-        // 4. THE MAGIC: Spawn a NEW bot process
-        // This starts a completely new "Garmin" in the background
-        const child = spawn(process.argv[0], process.argv.slice(1), {
-            detached: true, 
-            stdio: 'inherit'
-        });
+        // 3. Smart Restart Logic
+        setTimeout(async () => {
+            // Check for common environment variables used by Cloud Platforms
+            const isCloudHost = process.env.RAILWAY_ENVIRONMENT || process.env.RENDER || process.env.DYNO;
 
-        // 5. Unlink the new bot from the old one so it can run alone
-        child.unref();
+            if (isCloudHost) {
+                // --- CLOUD MODE: HARD CRASH ---
+                // On Railway/Render, the only way to "restart" is to die.
+                // The platform sees the crash and automatically starts a new one.
+                console.log('☁️ Cloud Environment Detected. Exiting with code 1 to trigger platform auto-restart.');
+                process.exit(1); 
+            } else {
+                // --- LOCAL PC MODE: SOFT RESET ---
+                // We do NOT exit. We just destroy the client and re-login.
+                // This keeps your terminal window open.
+                console.log('💻 Local Environment Detected. Performing Soft Reset...');
+                
+                try {
+                    // Destroy the client (logs out, stops listening)
+                    await message.client.destroy();
+                    console.log('Client destroyed. Reconnecting in 3 seconds...');
 
-        // 6. KILL THE OLD BOT (This fixes the "Ghost" double messages)
-        console.log('Exiting old process...');
-        process.exit(0);
+                    // Wait a moment to ensure ports open up
+                    setTimeout(async () => {
+                        // Clear module cache for commands? (Optional, complex to do right)
+                        // For now, we just re-login to fix connection/voice bugs.
+                        
+                        await message.client.login(process.env.TOKEN);
+                        console.log('✅ Soft reset complete. Bot is back online in the same process.');
+                    }, 3000);
+                } catch (err) {
+                    console.error('❌ Failed to soft restart:', err);
+                    console.log('Attempting hard exit as fallback...');
+                    process.exit(1);
+                }
+            }
+        }, 1000); 
     }
 };

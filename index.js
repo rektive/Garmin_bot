@@ -245,57 +245,41 @@ client.distube = new DisTube(client, {
 // DisTube Events
 client.distube
   .on('playSong', async (queue, song) => {
-    // --- 1. DETERMINE CURRENT BUTTON STATE ---
-    // Check if loop or shuffle is active to set the initial button label
+    // --- 1. DETERMINE BUTTON STATES ---
     const isLoop = queue.repeatMode === 2;
     const isShuffle = queue.shuffle;
-
     let modeLabel = '➡️ Order';
     let modeStyle = ButtonStyle.Secondary;
+    if (isLoop) { modeLabel = '🔁 Loop'; modeStyle = ButtonStyle.Success; } 
+    else if (isShuffle) { modeLabel = '🔀 Shuffle'; modeStyle = ButtonStyle.Success; }
 
-    if (isLoop) {
-        modeLabel = '🔁 Loop';
-        modeStyle = ButtonStyle.Success; // Green
-    } else if (isShuffle) {
-        modeLabel = '🔀 Shuffle';
-        modeStyle = ButtonStyle.Success; // Green
-    }
+    // --- 2. PLAYER CONTROLS (Row 1) ---
+    const row1 = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setCustomId('distube_pause_resume').setLabel('⏸️ / ▶️').setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder().setCustomId('distube_skip').setLabel('⏭️').setStyle(ButtonStyle.Primary),
+        new ButtonBuilder().setCustomId('distube_stop').setLabel('⏹️').setStyle(ButtonStyle.Danger),
+        new ButtonBuilder().setCustomId('distube_mode').setLabel(modeLabel).setStyle(modeStyle)
+    );
 
-    // --- 2. DEFINE BUTTONS ---
-    const row1 = new ActionRowBuilder()
-      .addComponents(
-        new ButtonBuilder()
-          .setCustomId('distube_pause_resume')
-          .setLabel('⏸️ / ▶️') // Shortened to fit nicely
-          .setStyle(ButtonStyle.Secondary),
-        new ButtonBuilder()
-          .setCustomId('distube_skip')
-          .setLabel('⏭️')
-          .setStyle(ButtonStyle.Primary),
-        new ButtonBuilder()
-          .setCustomId('distube_stop')
-          .setLabel('⏹️')
-          .setStyle(ButtonStyle.Danger),
-        // --- NEW MODE BUTTON ---
-        new ButtonBuilder()
-          .setCustomId('distube_mode')
-          .setLabel(modeLabel) 
-          .setStyle(modeStyle)
-      );
+    // --- 3. EXTRAS (Row 2) ---
+    // Sanitize name for ID
+    const safeName = song.name.replace(/[^a-zA-Z0-9 \-\(\)]/g, "").substring(0, 35);
+    const row2 = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setCustomId('distube_queue').setLabel('Show Queue').setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder().setCustomId('distube_filters').setLabel('🎧 Filters').setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder().setCustomId(`mui_like_url_${song.url}::${safeName}`).setLabel('❤️ Like').setStyle(ButtonStyle.Success),
+        // FIX: Changed ID to unique 'mui_back_to_search'
+        new ButtonBuilder().setCustomId('mui_back_to_search').setLabel('⬅️ Search').setStyle(ButtonStyle.Secondary)
+    );
 
-    const row2 = new ActionRowBuilder()
-      .addComponents(
-        new ButtonBuilder()
-          .setCustomId('distube_queue')
-          .setLabel('Show Queue')
-          .setStyle(ButtonStyle.Secondary),
-        new ButtonBuilder()
-          .setCustomId('distube_filters')
-          .setLabel('🎧 Filters')
-          .setStyle(ButtonStyle.Secondary)
-      );
+    // --- 4. NAVIGATION BAR (Row 3) ---
+    const row3 = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setCustomId('mui_home').setLabel('🏠 Home').setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder().setCustomId('mui_search_mode').setLabel('🔍 Search').setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder().setCustomId('mui_library').setLabel('📚 Library').setStyle(ButtonStyle.Secondary),
+        new ButtonBuilder().setCustomId('mui_song').setLabel('🎵 Song').setStyle(ButtonStyle.Primary).setDisabled(true) 
+    );
 
-    // Create the "Now Playing" Embed
     const embed = new EmbedBuilder()
       .setColor('#0099ff')
       .setTitle(`🎵 Now Playing`)
@@ -309,9 +293,9 @@ client.distube
 
     try {
       if (queue.nowPlayingMessage) {
-        await queue.nowPlayingMessage.edit({ embeds: [embed], components: [row1, row2] });
+        await queue.nowPlayingMessage.edit({ embeds: [embed], components: [row1, row2, row3] });
       } else {
-        const msg = await queue.textChannel.send({ embeds: [embed], components: [row1, row2] });
+        const msg = await queue.textChannel.send({ embeds: [embed], components: [row1, row2, row3] });
         queue.nowPlayingMessage = msg;
       }
     } catch (error) {
@@ -1870,7 +1854,12 @@ client.on('interactionCreate', async (interaction) => {
             return;
         }
         // --- END OF NEW FILTER HANDLER ---
-
+        // Music UI Handler (Handles Home, Search, Library buttons)
+        if (interaction.isButton() && interaction.customId.startsWith('mui_')) {
+            const musicUI = require('./commands/music_ui.js');
+            await musicUI.handleInteraction(client, interaction);
+            return;
+        }
 
         // --- YOUR EXISTING HANDLERS (UNCHANGED) ---
         if (rouletteButton && typeof rouletteButton.handleInteraction === 'function') {
@@ -1882,19 +1871,20 @@ client.on('interactionCreate', async (interaction) => {
         }
 
         if (scheduleButton && typeof scheduleButton.handleInteraction === 'function') {
-            await scheduleButton.handleInteraction(client, interaction);
-        }
+            await scheduleButton.handleInteraction(client, interaction);
+        }
 
-        // --- MUSIC BUTTON HANDLER ---
-        // When user clicks "Music" button
-        if (interaction.isButton() && interaction.customId === 'music') {
-            await musicButton.execute(interaction);
-            return;
-        }
-
+        // --- MUSIC BUTTON HANDLER ---
+        // When user clicks "Music" button, launch the NEW UI
+        if (interaction.isButton() && interaction.customId === 'music') {
+            const musicUI = require('./commands/music_ui.js');
+            await musicUI.showHome(interaction); 
+            return;
+        }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // When user clicks song buttons (This will now work!)
-        const musicHandled = await musicButton.handleSongButtons(interaction);
-        if (musicHandled) return;
+//         const musicHandled = await musicButton.handleSongButtons(interaction);
+//         if (musicHandled) return;
 
         // --- PLAYLIST BUTTON HANDLER ---
         // When user clicks "Playlist" button
