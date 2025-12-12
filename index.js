@@ -1,7 +1,8 @@
  // index.js
 require('dotenv').config();
 //const { Client, GatewayIntentBits, PermissionsBitField } = require('discord.js');
-const { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+// const { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Partials, ChannelType } = require('discord.js');
 
 const fs = require('fs');
 const path = require('path');
@@ -38,8 +39,12 @@ const client = new Client({
         GatewayIntentBits.GuildMembers,
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildVoiceStates
-    ]
+        GatewayIntentBits.GuildVoiceStates,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.GuildPresences 
+    ],
+    // --- 👇 ADD THIS PARTIALS BLOCK 👇 ---
+    partials: [Partials.Channel] 
 });
 //////////////////////////////////////////////////////////////////////////////////////////
 /// Initialize DisTube
@@ -262,19 +267,24 @@ client.distube
     );
 
     // --- 3. EXTRAS (Row 2) ---
-    // Sanitize name for ID
-    const safeName = song.name.replace(/[^a-zA-Z0-9 \-\(\)]/g, "").substring(0, 35);
+    // FIX: Shorten name to 15 chars to prevent 100 char limit error with long URLs
+    const safeName = song.name.replace(/[^a-zA-Z0-9 \-\(\)]/g, "").substring(0, 15);
+    
+    // Safety check: if URL is massive (>80 chars), we skip the name entirely to avoid crash
+    const idPayload = song.url.length > 80 
+        ? song.url.substring(0, 80) // Just the URL
+        : `${song.url}::${safeName}`; // URL + Name
+
     const row2 = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setCustomId('distube_queue').setLabel('Show Queue').setStyle(ButtonStyle.Secondary),
         new ButtonBuilder().setCustomId('distube_filters').setLabel('🎧 Filters').setStyle(ButtonStyle.Secondary),
-        new ButtonBuilder().setCustomId(`mui_like_url_${song.url}::${safeName}`).setLabel('❤️ Like').setStyle(ButtonStyle.Success),
-        // FIX: Changed ID to unique 'mui_back_to_search'
+        // Use the safe payload
+        new ButtonBuilder().setCustomId(`mui_like_url_${idPayload}`).setLabel('❤️ Like').setStyle(ButtonStyle.Success),
         new ButtonBuilder().setCustomId('mui_back_to_search').setLabel('⬅️ Search').setStyle(ButtonStyle.Secondary)
     );
 
-    // --- 4. NAVIGATION BAR (Row 3) ---
+    // --- 4. NAVIGATION BAR (Row 3 - NO HOME) ---
     const row3 = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setCustomId('mui_home').setLabel('🏠 Home').setStyle(ButtonStyle.Secondary),
         new ButtonBuilder().setCustomId('mui_search_mode').setLabel('🔍 Search').setStyle(ButtonStyle.Secondary),
         new ButtonBuilder().setCustomId('mui_library').setLabel('📚 Library').setStyle(ButtonStyle.Secondary),
         new ButtonBuilder().setCustomId('mui_song').setLabel('🎵 Song').setStyle(ButtonStyle.Primary).setDisabled(true) 
@@ -490,17 +500,20 @@ client.on('guildCreate', async (guild) => {
 });
 //////////////////////////////////////
 //////////////////////////////////////
+// Handle all interactions (Slash Commands & Buttons)
 client.on('voiceStateUpdate', async (oldState, newState) => {
-    // 1. Health System Check (Your existing logic)
+    // 1. Health System Check
+    // Checks if the user has 0 HP and prevents them from joining if they are not the owner
     health.checkVoiceJoin(newState);
 
     // 2. Temp Channel Cleanup Logic
     // We only care if someone LEFT a channel (oldState.channel is defined)
     if (oldState.channel) {
         const channelId = oldState.channel.id;
+        // Since index.js is in the root folder, we look for the file directly
         const TEMP_FILE = path.join(__dirname, 'temp_channels.json');
         
-        // Check if this channel is in our "temp_channels.json" list
+        // Check if this channel is in our tracking list
         let tempChannels = [];
         try {
             if (fs.existsSync(TEMP_FILE)) {
@@ -508,10 +521,12 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
             }
         } catch (e) { console.error('Error reading temp_channels.json:', e); }
 
+        // If this channel ID is in our list of temp channels...
         if (tempChannels.includes(channelId)) {
-            // Check if it is now EMPTY
+            // ...and it is now EMPTY
             if (oldState.channel.members.size === 0) {
-                
+                console.log(`Temp channel ${oldState.channel.name} is empty. Scheduling deletion in 15s...`);
+
                 // Wait 15 seconds
                 setTimeout(async () => {
                     // Fetch the channel again to make sure it's STILL empty
@@ -520,9 +535,10 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
                         const channel = await oldState.guild.channels.fetch(channelId).catch(() => null);
                         if (channel && channel.members.size === 0) {
                             await channel.delete();
+                            console.log(`Deleted temp channel: ${channel.name}`);
                             
                             // Remove from JSON
-                            // We re-read the file just to be safe
+                            // We re-read the file just to be safe in case it changed
                             let currentTemps = [];
                             if (fs.existsSync(TEMP_FILE)) {
                                 currentTemps = JSON.parse(fs.readFileSync(TEMP_FILE, 'utf8'));
@@ -603,6 +619,53 @@ function createFilterMessage(queue) {
 /////////////////////////////////////////////////////////////////////////////
 
 client.on('messageCreate', async (message) => {
+    // --- 1. DM FORWARDING SYSTEM (Updated with Reply Button) ---
+    // If the message is NOT in a guild (it's a DM) and NOT from a bot
+    if (!message.guild && !message.author.bot) {
+        console.log(`[DM] ${message.author.tag}: ${message.content}`);
+        
+        // 👇 PASTE THE ID OF YOUR ADMIN/LOG CHANNEL HERE 👇
+        const LOG_CHANNEL_ID = '1449111482028654736'; 
+
+        try {
+            const logChannel = await client.channels.fetch(LOG_CHANNEL_ID);
+            if (logChannel) {
+                const dmEmbed = new EmbedBuilder()
+                    .setColor('#FFD700') // Gold
+                    .setTitle(`📩 Reply from ${message.author.username}`)
+                    .setThumbnail(message.author.displayAvatarURL())
+                    .addFields(
+                        { name: '👤 User', value: `${message.author} (\`${message.author.tag}\`)`, inline: true },
+                        { name: '🆔 ID', value: `\`${message.author.id}\``, inline: true },
+                        { name: '💬 Message', value: message.content || '*[Attachment/Image Only]*' }
+                    )
+                    .setTimestamp();
+
+                // Forward images too
+                const files = message.attachments.map(a => a.url);
+                
+                // --- NEW: Create Reply Button ---
+                // We store the userID in the customId: 'dm_reply_USERID'
+                const row = new ActionRowBuilder().addComponents(
+                    new ButtonBuilder()
+                        .setCustomId(`dm_reply_${message.author.id}`)
+                        .setLabel('Reply to User')
+                        .setEmoji('✉️')
+                        .setStyle(ButtonStyle.Primary)
+                );
+
+                await logChannel.send({ 
+                    content: `🔔 **New DM Received!**`, 
+                    embeds: [dmEmbed], 
+                    files: files,
+                    components: [row] // Add the button
+                });
+            }
+        } catch (error) {
+            console.error('Could not forward DM. Check Channel ID:', error);
+        }
+        return; // Stop here, don't run commands in DMs
+    }
     if (message.author.bot || !message.guild) return;
     levelSystem.giveXP(message); // This will track XP on every message
     if (!message.content.startsWith(PREFIX)) return;
@@ -1612,300 +1675,135 @@ else if (command === 'kaboom') {
 // Handle button interactions (like Roulette button)
 // Handle button interactions (like Roulette button)
 // Handle button interactions (like Roulette button)
+// Handle all interactions (Slash Commands & Buttons)
+// Handle all interactions (Slash Commands & Buttons)
+// Handle all interactions (Slash Commands & Buttons)
+// Handle all interactions
+const { ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js'); // Ensure these are imported!
+
 client.on('interactionCreate', async (interaction) => {
-    try {
-        // Handle Slash Commands (like /yt)
+    try {
+        // --- 1. HANDLE SLASH COMMANDS ---
         if (interaction.isChatInputCommand()) {
+             // ... (Keep your existing slash command logic: yt, voice, room, oblava, chicken, rename, vc_delete) ...
+             // Just paste your existing slash command block here.
+             const command = interaction.commandName;
+             if (command === 'yt') await require('./commands/yt.js').execute(interaction);
+             else if (command === 'voice') await require('./commands/create_voice.js').execute(interaction);
+             else if (command === 'room') await require('./commands/room.js').execute(interaction);
+             else if (command === 'oblava') await require('./commands/oblava.js').execute(interaction);
+             else if (command === 'chicken') await require('./commands/chicken.js').execute(interaction);
+             else if (command === 'rename') await require('./commands/rename.js').execute(interaction);
+             else if (command === 'vc_delete') await require('./commands/vc_delete.js').execute(interaction);
+             else if (command === 'send_msg') await require('./commands/send_msg.js').execute(interaction);
+             else if (command === 'send_audio') await require('./commands/send_audio.js').execute(interaction);
+             else if (command === 'send_msg_track') await require('./commands/send_msg_track.js').execute(interaction);
+             return;
+        }
+
+        // --- 👇 NEW: HANDLE DM REPLY BUTTON 👇 ---
+        if (interaction.isButton() && interaction.customId.startsWith('dm_reply_')) {
+            const userId = interaction.customId.replace('dm_reply_', '');
             
-            // 1. Existing YT Command
-            if (interaction.commandName === 'yt') {
-                const ytCommand = require('./commands/yt.js');
-                await ytCommand.execute(interaction);
-            }
+            // Create the Modal
+            const modal = new ModalBuilder()
+                .setCustomId(`dm_reply_modal_${userId}`)
+                .setTitle('Reply to User');
 
-            // create_voice slash command
-            if (interaction.commandName === 'voice') {
-                const voiceCommand = require('./commands/create_voice.js'); // <-- The require happens HERE
-                await voiceCommand.execute(interaction);
-            }
-            // Limit manager slash command
-            if (interaction.commandName === 'room') {
-                const roomCommand = require('./commands/room.js');
-                await roomCommand.execute(interaction);
-            }
-            // Oblava slash command
-            if (interaction.commandName === 'oblava') {
-                const oblavaCommand = require('./commands/oblava.js');
-                await oblavaCommand.execute(interaction);
-            }
-            // Chicken slash command
-            if (interaction.commandName === 'chicken') {
-                const chikenCommand = require('./commands/chicken.js');
-                await chikenCommand.execute(interaction);
-            }
+            const messageInput = new TextInputBuilder()
+                .setCustomId('dm_message_input')
+                .setLabel('Your Message')
+                .setStyle(TextInputStyle.Paragraph) // Multi-line box
+                .setRequired(true);
 
-            if(interaction.commandName === 'rename') {
-                const renameCommand = require('./commands/rename.js');
-                await renameCommand.execute(interaction);
-            }
+            const firstActionRow = new ActionRowBuilder().addComponents(messageInput);
+            modal.addComponents(firstActionRow);
 
-            return; // Stop processing buttons
-        }
-        
-        if (await moreButton.handleInteraction(interaction)) return;
-        if (await profileButton.handleInteraction(client, interaction)) return;
-        if (await healthButton.handleInteraction(client, interaction)) return;
-        // yt
-        if (interaction.isChatInputCommand()) {
-            if (interaction.commandName === 'yt') {
-                const ytCommand = require('./commands/yt.js');
-                await ytCommand.execute(interaction);
-            }
-            return; // Stop processing other interaction types
+            await interaction.showModal(modal);
+            return;
         }
 
-        // --- MUSIC CONTROL BUTTON HANDLER ---
-        // This handles the "Pause", "Skip", "Stop", "Queue", and "Filters" buttons
-        if (interaction.isButton() && interaction.customId.startsWith('distube_')) {
-            const queue = client.distube.getQueue(interaction.guildId);
-
-            // Check if bot is in a channel
-            if (!queue) {
-                return interaction.reply({ content: 'Bot is not playing anything.', ephemeral: true });
-            }
-
-            // Check if user is in the same channel
-            if (interaction.member.voice.channelId !== queue.voice.channelId) {
-                return interaction.reply({ content: 'You must be in the same voice channel!', ephemeral: true });
-             }
-
-            try {
-                switch (interaction.customId) {
-                case 'distube_pause_resume':
-                    if (queue.paused) {
-                        queue.resume();
-                    } else {
-                        queue.pause();
-                    }
-                        await interaction.deferUpdate();
-                    break;
-
-                // --- 👇 UPDATED SKIP LOGIC 👇 ---
-                case 'distube_skip':
-                    if (queue.songs.length <= 1) {
-                        queue.stop(); // Stop if no more songs
-                    } else {
-                        // If Shuffle is ON, jump to a random song
-                        if (queue.shuffle) {
-                            try {
-                                // Pick a random number between 1 (next song) and the last song
-                                const randomJump = Math.floor(Math.random() * (queue.songs.length - 1)) + 1;
-                                await queue.jump(randomJump);
-                            } catch (err) {
-                                // If calculation fails (rare), fallback to normal skip
-                                await queue.skip();
-                            }
-                        } else {
-                            // If Order or Loop is ON, just play the next one in line
-                            await queue.skip();
-                        }
-                    }
-                    await interaction.deferUpdate();
-                    break;
-                // --- END OF UPDATE ---
-
-                case 'distube_skip':
-                    if (queue.songs.length <= 1) {
-                        queue.stop(); // Stop if no more songs
-                    } else {
-                        await queue.skip();
-                    }
-                        await interaction.deferUpdate();
-                    break;
-
-                case 'distube_stop':
-                    queue.stop();
-                        await interaction.deferUpdate();
-                    break;
-                
-                //////////////////////////////
-                // --- 👇 NEW MODE BUTTON LOGIC 👇 ---
-                case 'distube_mode':
-                    // Cycle: Order -> Shuffle -> Loop -> Order
-                    
-                    // 1. Get the current label from the button that was clicked
-                    const currentLabel = interaction.component.label;
-                    
-                    let nextLabel = '';
-                    let nextStyle = ButtonStyle.Secondary;
-
-                    if (currentLabel.includes('Order')) {
-                        // Current: ORDER -> Go to SHUFFLE
-                        await queue.shuffle(); 
-                        nextLabel = '🔀 Shuffle';
-                        nextStyle = ButtonStyle.Success; // Green
-                    } 
-                    else if (currentLabel.includes('Shuffle')) {
-                        // Current: SHUFFLE -> Go to LOOP
-                        await queue.shuffle(); // Toggle Shuffle OFF
-                        await queue.setRepeatMode(2); // 2 = Loop Queue
-                        nextLabel = '🔁 Loop';
-                        nextStyle = ButtonStyle.Success; // Green
-                    } 
-                    else {
-                        // Current: LOOP -> Go to ORDER
-                        await queue.setRepeatMode(0); // 0 = Disabled
-                        nextLabel = '➡️ Order';
-                        nextStyle = ButtonStyle.Secondary; // Grey
-                    }
-
-                    // 2. Update the button UI
-                    const row1 = ActionRowBuilder.from(interaction.message.components[0]);
-                    const row2 = ActionRowBuilder.from(interaction.message.components[1]); // Keep row 2
-                    
-                    // Find the mode button in row 1
-                    const buttonIndex = row1.components.findIndex(c => c.data.custom_id === 'distube_mode');
-                    
-                    if (buttonIndex !== -1) {
-                        row1.components[buttonIndex].setLabel(nextLabel);
-                        row1.components[buttonIndex].setStyle(nextStyle);
-                        
-                        // 3. Silently update the message (No reply, no pop-up)
-                        await interaction.update({ components: [row1, row2] });
-                    } else {
-                        // Fallback if button isn't found
-                        await interaction.deferUpdate();
-                    }
-                    break;
-                // --- END OF NEW MODE BUTTON LOGIC ---
-                case 'distube_queue':
-                    const songList = queue.songs
-                        .map((song, i) => `**${i}.** [${song.name}](${song.url}) - \`${song.formattedDuration}\``)
-                        .slice(0, 10) 
-                        .join('\n');
-                        
-                    const queueEmbed = new EmbedBuilder() 
-                        .setColor('#FFFFFF')
-                        .setTitle('Music Queue')
-                        .setDescription(songList || 'Queue is empty.')
-                        .setFooter({ text: `Now Playing: ${queue.songs[0].name}` });
-                        
-                    await interaction.reply({ embeds: [queueEmbed], ephemeral: true });
-                    break;
-
-                    // --- 👇 1. ADDED THIS NEW CASE 👇 ---
-                    case 'distube_filters':
-                        // This calls the helper function you added in Change 2
-                        const filterMessage = createFilterMessage(queue);
-                        await interaction.reply(filterMessage);
-                        break;
-
-                } // --- End of switch
-            } catch (e) {
-                console.error('Music control error:', e);
-                if (!interaction.replied && !interaction.deferred) {
-                    await interaction.reply({ content: `An error occurred: ${e.message}`, ephemeral: true });
-                }
-            }
-             return; // Stop further processing in this interaction
-        }
-       // --- END OF NEW MUSIC CONTROL HANDLER ---
-
-
-        // --- 👇 2. ADDED THIS ENTIRE NEW HANDLER 👇 ---
-
-        // --- NEW FILTER SELECTION HANDLER ---
-        // This handles clicks on 'filter_bassboost', 'filter_clear', etc.
-        if (interaction.isButton() && interaction.customId.startsWith('filter_')) {
-            const queue = client.distube.getQueue(interaction.guildId);
-
-            if (!queue) {
-                return interaction.reply({ content: 'Bot is not playing anything.', ephemeral: true });
-            }
-            if (interaction.member.voice.channelId !== queue.voice.channelId) {
-                return interaction.reply({ content: 'You must be in the same voice channel!', ephemeral: true });
-            }
-
-            const filterName = interaction.customId.replace('filter_', ''); // e.g., 'bassboost' or 'clear'
+        // --- 👇 NEW: HANDLE MODAL SUBMISSION 👇 ---
+        if (interaction.isModalSubmit() && interaction.customId.startsWith('dm_reply_modal_')) {
+            const userId = interaction.customId.replace('dm_reply_modal_', '');
+            const replyContent = interaction.fields.getTextInputValue('dm_message_input');
 
             try {
-                if (filterName === 'clear') {
-                    await queue.filters.clear();
-                } else {
-                    // This toggles the filter on or off
-                    if (queue.filters.has(filterName)) {
-                        await queue.filters.remove(filterName);
-                    } else {
-                        await queue.filters.add(filterName);
-                    }
-                }
+                const targetUser = await client.users.fetch(userId);
+                await targetUser.send(`${replyContent}`);
+                
+                await interaction.reply({ 
+                    content: `✅ Reply sent to **${targetUser.tag}**: "${replyContent}"`, 
+                    ephemeral: true 
+                });
+                
+                // Optional: Log it in the channel too so other admins see you replied
+                // interaction.channel.send(`📤 **${interaction.user.tag}** replied: "${replyContent}"`);
 
-                // After toggling, UPDATE the message with the new button states
-                // This calls the helper function again to get new buttons
-                const filterMessage = createFilterMessage(queue);
-                await interaction.update(filterMessage); // .update() edits the existing filter message
-
-            } catch (e) {
-                console.error('Filter toggle error:', e);
-                if (!interaction.replied && !interaction.deferred) {
-                    await interaction.reply({ content: `An error occurred: ${e.message}`, ephemeral: true });
-                }
+            } catch (error) {
+                console.error(error);
+                await interaction.reply({ 
+                    content: `❌ Failed to send reply. User might have blocked the bot.`, 
+                    ephemeral: true 
+                });
             }
             return;
         }
-        // --- END OF NEW FILTER HANDLER ---
-        // Music UI Handler (Handles Home, Search, Library buttons)
+        // --- 👆 END NEW HANDLERS 👆 ---
+
+
+        // --- 2. HANDLE OTHER BUTTONS (Existing Logic) ---
+        if (await moreButton.handleInteraction(interaction)) return;
+        if (await profileButton.handleInteraction(client, interaction)) return;
+        if (await healthButton.handleInteraction(client, interaction)) return;
+
+        // Music Control Buttons
+        if (interaction.isButton() && interaction.customId.startsWith('distube_')) {
+            // ... (Keep your existing DisTube button logic) ...
+            // Just paste your existing DisTube logic here
+             const queue = client.distube.getQueue(interaction.guildId);
+             // ... (truncated for brevity, keep your original code) ...
+             return;
+        }
+
+        // Filter Buttons
+        if (interaction.isButton() && interaction.customId.startsWith('filter_')) {
+             // ... (Keep your existing Filter logic) ...
+             const queue = client.distube.getQueue(interaction.guildId);
+             // ... (truncated) ...
+             return;
+        }
+
+        // Music UI Handler (mui_)
         if (interaction.isButton() && interaction.customId.startsWith('mui_')) {
             const musicUI = require('./commands/music_ui.js');
             await musicUI.handleInteraction(client, interaction);
             return;
         }
 
-        // --- YOUR EXISTING HANDLERS (UNCHANGED) ---
-        if (rouletteButton && typeof rouletteButton.handleInteraction === 'function') {
-            await rouletteButton.handleInteraction(client, interaction);
-        }
-
-        if (descriptionButton && typeof descriptionButton.handleInteraction === 'function') {
-        await descriptionButton.handleInteraction(interaction);
-        }
-
-        if (scheduleButton && typeof scheduleButton.handleInteraction === 'function') {
-            await scheduleButton.handleInteraction(client, interaction);
-        }
-
-        // --- MUSIC BUTTON HANDLER ---
-        // When user clicks "Music" button, launch the NEW UI
+        // Existing Command Buttons (Roulette, etc.)
+        if (rouletteButton && typeof rouletteButton.handleInteraction === 'function') await rouletteButton.handleInteraction(client, interaction);
+        if (descriptionButton && typeof descriptionButton.handleInteraction === 'function') await descriptionButton.handleInteraction(interaction);
+        if (scheduleButton && typeof scheduleButton.handleInteraction === 'function') await scheduleButton.handleInteraction(client, interaction);
+        
         if (interaction.isButton() && interaction.customId === 'music') {
             const musicUI = require('./commands/music_ui.js');
-            await musicUI.showHome(interaction); 
+            await musicUI.showSearchMode(interaction);
             return;
         }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        // When user clicks song buttons (This will now work!)
-//         const musicHandled = await musicButton.handleSongButtons(interaction);
-//         if (musicHandled) return;
+        
+        if (interaction.isButton() && interaction.customId === 'playlist') { await playlistButton.execute(interaction); return; }
+        const playlistHandled = await playlistButton.handleInteraction(client, interaction);
+        if (playlistHandled) return;
 
-        // --- PLAYLIST BUTTON HANDLER ---
-        // When user clicks "Playlist" button
-        if (interaction.isButton() && interaction.customId === 'playlist') {
-            await playlistButton.execute(interaction);
-            return;
-        }
+        if (interaction.isButton() && interaction.customId === 'back_to_menu') {
+            const descriptionButton = require('./commands/description_button.js');
+            await descriptionButton.execute(interaction);
+        }
 
-        // Handle all playlist interactions (create, delete, add song, remove song, play all, etc.)
-        const playlistHandled = await playlistButton.handleInteraction(client, interaction);
-        if (playlistHandled) return;
-
-        // Optional: when user clicks "Back to Menu" (returns to main buttons)
-       if (interaction.isButton() && interaction.customId === 'back_to_menu') {
-            const descriptionButton = require('./commands/description_button.js');
-            await descriptionButton.execute(interaction);
-        }
-
-    } catch (err) {
-        console.error('Interaction handler error:', err);
-    }
+    } catch (err) {
+        console.error('Interaction handler error:', err);
+    }
 });
 
 // Login

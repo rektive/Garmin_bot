@@ -126,6 +126,42 @@ const commands = [
                 .setDescription('The new name for the channel')
                 .setRequired(true)
                 .setMaxLength(100)),
+    // 7. /vc_delete
+    new SlashCommandBuilder()
+        .setName('vc_delete')
+        .setDescription('Forcefully deletes the bot voice connection (Admin only).'),
+    // 8. /voice_pr @User slash command
+    new SlashCommandBuilder()
+        .setName('voice_pr')
+        .setDescription('Create a private voice channel for you and one other user.')
+        .addUserOption(option => 
+            option.setName('user')
+                .setDescription('The user to invite')
+                .setRequired(true)),
+    // 9. /send_msg @User msg:message_to_user
+    new SlashCommandBuilder()
+        .setName('send_msg')
+        .setDescription('Send a DM to a user (Admin only).')
+        .addUserOption(option => 
+            option.setName('user')
+                .setDescription('The user to message')
+                .setRequired(true))
+        .addStringOption(option => 
+            option.setName('msg')
+                .setDescription('The message content')
+                .setRequired(true)),
+    // 10. /send_msg_track @user msg:sends_message_when_user_online
+    new SlashCommandBuilder()
+        .setName('send_msg_track')
+        .setDescription('Queues a DM to be sent when the user comes online (Admin only).')
+        .addUserOption(option => 
+            option.setName('user')
+                .setDescription('The user to message')
+                .setRequired(true))
+        .addStringOption(option => 
+            option.setName('msg')
+                .setDescription('The message content')
+                .setRequired(true)),
 ]
 .map(command => command.toJSON());
 
