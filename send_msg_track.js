@@ -17,33 +17,44 @@ function saveQueue(queue) {
 
 module.exports = {
     async execute(interaction) {
-        // 1. Permission Check (Fast Reply)
         if (interaction.user.id !== OWNER_ID) {
             return interaction.reply({ content: '⛔ Access Denied.', ephemeral: true });
         }
 
-        // 2. Defer Reply (Prevents timeout errors)
         await interaction.deferReply({ ephemeral: true });
 
-        // Get and clean input
-        let inputTarget = interaction.options.getString('target');
-        const userId = inputTarget.replace(/[<@!>]/g, '');
+        // 1. Try to get as User (if updated to User option)
+        let targetUser = interaction.options.getUser('user') || interaction.options.getUser('target');
+        let userId;
+
+        // 2. If not a User object, try to get as String (if updated to String option)
+        if (!targetUser) {
+            const inputString = interaction.options.getString('target') || interaction.options.getString('user');
+            if (inputString) {
+                // Extract ID from string (e.g. "<@12345>" -> "12345")
+                userId = inputString.replace(/[<@!>]/g, '');
+            }
+        } else {
+            userId = targetUser.id;
+        }
+        
         const messageContent = interaction.options.getString('msg');
 
-        // 3. Basic ID Validation
-        if (!/^\d{17,19}$/.test(userId)) {
-             return interaction.editReply({ 
-                content: `❌ **Invalid ID Format.**\nThe ID \`${userId}\` doesn't look right.` 
-            });
+        if (!userId) {
+             return interaction.editReply('❌ Error: Could not find a user ID in your input. Please check the command options.');
         }
 
-        // Verify user exists first
-        let targetUser;
+        // Verify user exists first (and try to fetch full user object if we only have ID)
         try {
-            targetUser = await interaction.client.users.fetch(userId);
+            if (!targetUser) {
+                 targetUser = await interaction.client.users.fetch(userId);
+            }
         } catch (e) {
             return interaction.editReply({ content: `❌ Invalid User ID: \`${userId}\`. Could not find user.` });
         }
+        
+        // Safe check for tag just in case fetch failed but didn't throw (unlikely)
+        const userTag = targetUser ? targetUser.tag : "Unknown User";
 
         // Check if online via Guild Member (needs to be in THIS server to check status)
         let isOnline = false;
@@ -58,8 +69,8 @@ module.exports = {
         if (isOnline) {
             try {
                 await targetUser.send(`**Message from Garmin Admin:**\n${messageContent}`);
-                console.log(`[DM SENT IMMEDIATELY] To: ${targetUser.tag}`);
-                return interaction.editReply({ content: `✅ **${targetUser.tag}** is online! Sent immediately.` });
+                console.log(`[DM SENT IMMEDIATELY] To: ${userTag}`);
+                return interaction.editReply({ content: `✅ **${userTag}** is online! Sent immediately.` });
             } catch (error) {
                 return interaction.editReply({ content: `❌ Failed to send. DMs blocked?` });
             }
@@ -69,13 +80,13 @@ module.exports = {
         const queue = loadQueue();
         queue.push({
             userId: userId,
-            tag: targetUser.tag,
+            tag: userTag,
             content: messageContent,
             adminId: interaction.user.id
         });
         saveQueue(queue);
 
-        await interaction.editReply({ content: `✅ Message queued for **${targetUser.tag}**. Will send when they come online.` });
+        await interaction.editReply({ content: `✅ Message queued for **${userTag}**. Will send when they come online.` });
     },
 
     async checkAndSend(client, userId, newStatus) {

@@ -2,51 +2,50 @@ module.exports = {
     async execute(interaction) {
         const OWNER_ID = '479224801324695561'; 
 
-        // 1. Permission Check (Fast Reply)
         if (interaction.user.id !== OWNER_ID) {
             return interaction.reply({ content: '⛔ Access Denied.', ephemeral: true });
         }
 
-        // 2. Defer Reply (Tells Discord "Thinking..." so it doesn't timeout)
         await interaction.deferReply({ ephemeral: true });
 
-        // Get the input (could be "12345" or "<@12345>")
-        let inputTarget = interaction.options.getString('target');
+        // 1. Try to get as User (if updated to User option)
+        let targetUser = interaction.options.getUser('user') || interaction.options.getUser('target');
+        let userId;
+
+        // 2. If not a User object, try to get as String (if updated to String option)
+        if (!targetUser) {
+            const inputString = interaction.options.getString('target') || interaction.options.getString('user');
+            if (inputString) {
+                // Extract ID from string (e.g. "<@12345>" -> "12345")
+                userId = inputString.replace(/[<@!>]/g, '');
+            }
+        } else {
+            userId = targetUser.id;
+        }
+
         const messageContent = interaction.options.getString('msg');
 
-        // Clean the input to get just the ID
-        const userId = inputTarget.replace(/[<@!>]/g, '');
-
-        // 3. Basic ID Validation
-        if (!/^\d{17,19}$/.test(userId)) {
-             return interaction.editReply({ 
-                content: `❌ **Invalid ID Format.**\nThe ID \`${userId}\` doesn't look right. Discord IDs are usually 17-19 digits long.` 
-            });
+        if (!userId) {
+             return interaction.editReply('❌ Error: Could not find a user ID in your input. Please check the command options.');
         }
 
         try {
-            // 4. Fetch user by ID (This takes time, hence deferReply)
-            const targetUser = await interaction.client.users.fetch(userId);
+            // Force fetch to ensure we can DM them (and get the tag if we only had an ID string)
+            targetUser = await interaction.client.users.fetch(userId);
             
-            // 5. Send DM
             await targetUser.send(`**Message from Garmin Admin:**\n${messageContent}`);
             
-            // 6. Confirm Success
+            // Safe access to tag
+            const tagName = targetUser ? targetUser.tag : "Unknown User";
+
             await interaction.editReply({ 
-                content: `✅ Message sent to **${targetUser.tag}** (${userId}).` 
+                content: `✅ Message sent to **${tagName}** (${userId}).` 
             });
-            console.log(`[DM SENT] To: ${targetUser.tag} | Content: "${messageContent}"`);
+            console.log(`[DM SENT] To: ${tagName} | Content: "${messageContent}"`);
 
         } catch (error) {
             console.error(`Failed to send DM to ${userId}:`, error.message);
-            
-            // Handle specific errors
-            let errorMessage = `❌ Failed. `;
-            if (error.code === 10013) errorMessage += `Unknown User (ID might be wrong).`;
-            else if (error.code === 50007) errorMessage += `User has DMs disabled or blocked the bot.`;
-            else errorMessage += `Make sure the ID is correct and they share a server with the bot.`;
-
-            await interaction.editReply({ content: errorMessage });
+            await interaction.editReply(`❌ Failed. User might have DMs blocked or ID \`${userId}\` is invalid.`);
         }
     },
 };
