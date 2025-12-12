@@ -138,25 +138,26 @@ const commands = [
             option.setName('user')
                 .setDescription('The user to invite')
                 .setRequired(true)),
-    // 9. /send_msg @User msg:message_to_user
+    // /send_msg (Updated to String)
     new SlashCommandBuilder()
         .setName('send_msg')
-        .setDescription('Send a DM to a user (Admin only).')
-        .addUserOption(option => 
-            option.setName('user')
-                .setDescription('The user to message')
+        .setDescription('Send a DM to a user by ID or Mention (Admin only).')
+        .addStringOption(option => 
+            option.setName('target') // Renamed from 'user' to be clearer
+                .setDescription('User ID or @Mention')
                 .setRequired(true))
         .addStringOption(option => 
             option.setName('msg')
                 .setDescription('The message content')
                 .setRequired(true)),
-    // 10. /send_msg_track @user msg:sends_message_when_user_online
+
+    // /send_msg_track (Updated to String)
     new SlashCommandBuilder()
         .setName('send_msg_track')
-        .setDescription('Queues a DM to be sent when the user comes online (Admin only).')
-        .addUserOption(option => 
-            option.setName('user')
-                .setDescription('The user to message')
+        .setDescription('Queues a DM for when a user comes online.')
+        .addStringOption(option => 
+            option.setName('target')
+                .setDescription('User ID or @Mention')
                 .setRequired(true))
         .addStringOption(option => 
             option.setName('msg')
