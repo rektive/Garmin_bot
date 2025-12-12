@@ -8,36 +8,32 @@ module.exports = {
 
         await interaction.deferReply({ ephemeral: true });
 
-        // 1. Try to get as User (if updated to User option)
-        let targetUser = interaction.options.getUser('user') || interaction.options.getUser('target');
-        let userId;
-
-        // 2. If not a User object, try to get as String (if updated to String option)
-        if (!targetUser) {
-            const inputString = interaction.options.getString('target') || interaction.options.getString('user');
-            if (inputString) {
-                // Extract ID from string (e.g. "<@12345>" -> "12345")
-                userId = inputString.replace(/[<@!>]/g, '');
-            }
-        } else {
-            userId = targetUser.id;
-        }
-
+        // 1. Get Input as STRING (Because we deployed it as addStringOption)
+        const inputTarget = interaction.options.getString('target') || interaction.options.getString('user');
         const messageContent = interaction.options.getString('msg');
 
-        if (!userId) {
-             return interaction.editReply('❌ Error: Could not find a user ID in your input. Please check the command options.');
+        if (!inputTarget) {
+             return interaction.editReply('❌ Error: Could not read "target" option.');
+        }
+
+        // 2. Clean the input to get just the ID
+        // This handles "<@123456789>" (Mention) AND "123456789" (Raw ID)
+        const userId = inputTarget.replace(/[<@!>]/g, '');
+
+        // 3. Validate ID Format
+        if (!/^\d{17,19}$/.test(userId)) {
+             return interaction.editReply({ 
+                content: `❌ **Invalid ID Format.**\nThe ID \`${userId}\` doesn't look right. Discord IDs are usually 17-19 digits long.` 
+            });
         }
 
         try {
-            // Force fetch to ensure we can DM them (and get the tag if we only had an ID string)
-            targetUser = await interaction.client.users.fetch(userId);
+            // 4. Fetch user by ID
+            const targetUser = await interaction.client.users.fetch(userId);
             
-            await targetUser.send(`**Message from Garmin Admin:**\n${messageContent}`);
+            await targetUser.send(`${messageContent}`);
             
-            // Safe access to tag
-            const tagName = targetUser ? targetUser.tag : "Unknown User";
-
+            const tagName = targetUser.tag || "Unknown User";
             await interaction.editReply({ 
                 content: `✅ Message sent to **${tagName}** (${userId}).` 
             });
@@ -45,7 +41,13 @@ module.exports = {
 
         } catch (error) {
             console.error(`Failed to send DM to ${userId}:`, error.message);
-            await interaction.editReply(`❌ Failed. User might have DMs blocked or ID \`${userId}\` is invalid.`);
+            
+            let errorMessage = `❌ Failed. `;
+            if (error.code === 10013) errorMessage += `Unknown User (ID might be wrong).`;
+            else if (error.code === 50007) errorMessage += `User has DMs disabled or blocked the bot.`;
+            else errorMessage += `Make sure the ID is correct and they share a server with the bot.`;
+
+            await interaction.editReply({ content: errorMessage });
         }
     },
 };

@@ -23,54 +23,48 @@ module.exports = {
 
         await interaction.deferReply({ ephemeral: true });
 
-        // 1. Try to get as User (if updated to User option)
-        let targetUser = interaction.options.getUser('user') || interaction.options.getUser('target');
-        let userId;
-
-        // 2. If not a User object, try to get as String (if updated to String option)
-        if (!targetUser) {
-            const inputString = interaction.options.getString('target') || interaction.options.getString('user');
-            if (inputString) {
-                // Extract ID from string (e.g. "<@12345>" -> "12345")
-                userId = inputString.replace(/[<@!>]/g, '');
-            }
-        } else {
-            userId = targetUser.id;
-        }
-        
+        // 1. Get Input as STRING
+        const inputTarget = interaction.options.getString('target') || interaction.options.getString('user');
         const messageContent = interaction.options.getString('msg');
 
-        if (!userId) {
-             return interaction.editReply('❌ Error: Could not find a user ID in your input. Please check the command options.');
+        if (!inputTarget) {
+             return interaction.editReply('❌ Error: Could not read "target" option.');
         }
 
-        // Verify user exists first (and try to fetch full user object if we only have ID)
+        // 2. Clean to get ID
+        const userId = inputTarget.replace(/[<@!>]/g, '');
+
+        if (!/^\d{17,19}$/.test(userId)) {
+             return interaction.editReply(`❌ **Invalid ID Format.**`);
+        }
+
+        // 3. Verify user exists via Fetch
+        let targetUser;
         try {
-            if (!targetUser) {
-                 targetUser = await interaction.client.users.fetch(userId);
-            }
+            targetUser = await interaction.client.users.fetch(userId);
         } catch (e) {
             return interaction.editReply({ content: `❌ Invalid User ID: \`${userId}\`. Could not find user.` });
         }
         
-        // Safe check for tag just in case fetch failed but didn't throw (unlikely)
-        const userTag = targetUser ? targetUser.tag : "Unknown User";
+        const userTag = targetUser.tag || "Unknown User";
 
-        // Check if online via Guild Member (needs to be in THIS server to check status)
+        // 4. Check Online Status
         let isOnline = false;
         try {
             const guildMember = await interaction.guild.members.fetch(userId);
-            isOnline = guildMember && guildMember.presence && guildMember.presence.status !== 'offline';
+            if (guildMember.presence && guildMember.presence.status !== 'offline') {
+                isOnline = true;
+            }
         } catch (e) {
-            // User might not be in this server, so we can't check status easily.
-            // We proceed to queue them or treat as offline.
+            // User likely not in this server
         }
 
+        // 5. Logic
         if (isOnline) {
             try {
-                await targetUser.send(`**Message from Garmin Admin:**\n${messageContent}`);
+                await targetUser.send(`${messageContent}`);
                 console.log(`[DM SENT IMMEDIATELY] To: ${userTag}`);
-                return interaction.editReply({ content: `✅ **${userTag}** is online! Sent immediately.` });
+                return interaction.editReply({ content: `✅ **${userTag}** is online! Message sent immediately.` });
             } catch (error) {
                 return interaction.editReply({ content: `❌ Failed to send. DMs blocked?` });
             }
