@@ -1,107 +1,107 @@
-const { PermissionsBitField } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 
 const QUEUE_FILE = path.join(__dirname, '../dm_queue.json');
+const OWNER_ID = '479224801324695561';
 
-// Helper to load queue
 function loadQueue() {
     try {
-        if (fs.existsSync(QUEUE_FILE)) {
-            return JSON.parse(fs.readFileSync(QUEUE_FILE, 'utf8'));
-        }
+        if (fs.existsSync(QUEUE_FILE)) return JSON.parse(fs.readFileSync(QUEUE_FILE, 'utf8'));
     } catch (e) { console.error(e); }
     return [];
 }
 
-// Helper to save queue
 function saveQueue(queue) {
     fs.writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2));
 }
 
 module.exports = {
     async execute(interaction) {
-        // 1. Permission Check (Admins only)
-        if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
-            return interaction.reply({ 
-                content: '⛔ Access Denied. Only admins can use this command.', 
-                ephemeral: true 
-            });
+        if (interaction.user.id !== OWNER_ID) {
+            return interaction.reply({ content: '⛔ Access Denied.', ephemeral: true });
         }
 
-        const targetUser = interaction.options.getUser('user');
+        await interaction.deferReply({ ephemeral: true });
+
+        // 1. Get Input as STRING
+        const inputTarget = interaction.options.getString('target') || interaction.options.getString('user');
         const messageContent = interaction.options.getString('msg');
 
-        // 2. Check if user is already online
-        const guildMember = await interaction.guild.members.fetch(targetUser.id).catch(() => null);
-        const isOnline = guildMember && guildMember.presence && guildMember.presence.status !== 'offline';
+        if (!inputTarget) {
+             return interaction.editReply('❌ Error: Could not read "target" option.');
+        }
 
+        // 2. Clean to get ID
+        const userId = inputTarget.replace(/[<@!>]/g, '');
+
+        if (!/^\d{17,19}$/.test(userId)) {
+             return interaction.editReply(`❌ **Invalid ID Format.**`);
+        }
+
+        // 3. Verify user exists via Fetch
+        let targetUser;
+        try {
+            targetUser = await interaction.client.users.fetch(userId);
+        } catch (e) {
+            return interaction.editReply({ content: `❌ Invalid User ID: \`${userId}\`. Could not find user.` });
+        }
+        
+        const userTag = targetUser.tag || "Unknown User";
+
+        // 4. Check Online Status
+        let isOnline = false;
+        try {
+            const guildMember = await interaction.guild.members.fetch(userId);
+            if (guildMember.presence && guildMember.presence.status !== 'offline') {
+                isOnline = true;
+            }
+        } catch (e) {
+            // User likely not in this server
+        }
+
+        // 5. Logic
         if (isOnline) {
-            // If already online, send immediately!
             try {
-                await targetUser.send(`**Message from Garmin Admin:**\n${messageContent}`);
-                console.log(`[DM SENT IMMEDIATELY] To: ${targetUser.tag} | Content: "${messageContent}"`);
-                return interaction.reply({ 
-                    content: `✅ **${targetUser.tag}** is already online! Message sent immediately.`, 
-                    ephemeral: true 
-                });
+                await targetUser.send(`${messageContent}`);
+                console.log(`[DM SENT IMMEDIATELY] To: ${userTag}`);
+                return interaction.editReply({ content: `✅ **${userTag}** is online! Message sent immediately.` });
             } catch (error) {
-                return interaction.reply({ 
-                    content: `❌ Failed to send DM immediately. They might have DMs blocked.`, 
-                    ephemeral: true 
-                });
+                return interaction.editReply({ content: `❌ Failed to send. DMs blocked?` });
             }
         }
 
-        // 3. Queue the message
+        // Queue it
         const queue = loadQueue();
         queue.push({
-            userId: targetUser.id,
-            tag: targetUser.tag,
+            userId: userId,
+            tag: userTag,
             content: messageContent,
             adminId: interaction.user.id
         });
         saveQueue(queue);
 
-        await interaction.reply({ 
-            content: `✅ Message queued for **${targetUser.tag}**. It will be sent automatically when they come online.`, 
-            ephemeral: true 
-        });
-        console.log(`[DM QUEUED] For: ${targetUser.tag} | Content: "${messageContent}"`);
+        await interaction.editReply({ content: `✅ Message queued for **${userTag}**. Will send when they come online.` });
     },
 
-    // Public method to check and send messages (called from index.js)
     async checkAndSend(client, userId, newStatus) {
-        if (newStatus === 'offline') return; // Don't send if they just went offline
+        if (newStatus === 'offline') return;
 
         const queue = loadQueue();
-        // Find all messages for this user
         const messagesToSend = queue.filter(item => item.userId === userId);
         
-        if (messagesToSend.length === 0) return; // Nothing to do
+        if (messagesToSend.length === 0) return;
 
-        // Filter out the messages we are about to send
         const remainingQueue = queue.filter(item => item.userId !== userId);
         
-        // Send them
         for (const msg of messagesToSend) {
             try {
                 const user = await client.users.fetch(userId);
-                await user.send(`${msg.content}`);
-                console.log(`[DM DELIVERED] To: ${user.tag} (Came Online) | Content: "${msg.content}"`);
-                
-                // Optional: Notify the admin who queued it?
-                // const admin = await client.users.fetch(msg.adminId);
-                // admin.send(`✅ Your queued message to **${user.tag}** has been delivered!`).catch(()=>{});
-
+                await user.send(`**Message from Garmin Admin:**\n${msg.content}`);
+                console.log(`[DM DELIVERED] To: ${user.tag}`);
             } catch (err) {
                 console.error(`Failed to deliver queued DM to ${userId}:`, err);
-                // If failed (e.g. blocked), maybe keep in queue? 
-                // For now we remove it to prevent loops/spam if they blocked the bot.
             }
         }
-
-        // Save the queue without the sent messages
         saveQueue(remainingQueue);
     }
 };
