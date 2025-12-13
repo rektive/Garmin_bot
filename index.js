@@ -2,7 +2,7 @@
 require('dotenv').config();
 //const { Client, GatewayIntentBits, PermissionsBitField } = require('discord.js');
 // const { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Partials, ChannelType } = require('discord.js');
+const { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Partials, ChannelType, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
 
 const fs = require('fs');
 const path = require('path');
@@ -1679,98 +1679,169 @@ else if (command === 'kaboom') {
 // Handle all interactions (Slash Commands & Buttons)
 // Handle all interactions (Slash Commands & Buttons)
 // Handle all interactions
-const { ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js'); // Ensure these are imported!
+//const { ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js'); // Ensure these are imported!
 
+///////
+// Handle all interactions (Slash Commands & Buttons)
 client.on('interactionCreate', async (interaction) => {
     try {
         // --- 1. HANDLE SLASH COMMANDS ---
         if (interaction.isChatInputCommand()) {
-             // ... (Keep your existing slash command logic: yt, voice, room, oblava, chicken, rename, vc_delete) ...
-             // Just paste your existing slash command block here.
-             const command = interaction.commandName;
-             if (command === 'yt') await require('./commands/yt.js').execute(interaction);
-             else if (command === 'voice') await require('./commands/create_voice.js').execute(interaction);
-             else if (command === 'room') await require('./commands/room.js').execute(interaction);
-             else if (command === 'oblava') await require('./commands/oblava.js').execute(interaction);
-             else if (command === 'chicken') await require('./commands/chicken.js').execute(interaction);
-             else if (command === 'rename') await require('./commands/rename.js').execute(interaction);
-             else if (command === 'vc_delete') await require('./commands/vc_delete.js').execute(interaction);
-             else if (command === 'send_msg') await require('./commands/send_msg.js').execute(interaction);
-             else if (command === 'send_audio') await require('./commands/send_audio.js').execute(interaction);
-             else if (command === 'send_msg_track') await require('./commands/send_msg_track.js').execute(interaction);
-             return;
+            const command = interaction.commandName;
+
+            if (command === 'yt') await require('./commands/yt.js').execute(interaction);
+            else if (command === 'voice') await require('./commands/create_voice.js').execute(interaction);
+            else if (command === 'room') await require('./commands/room.js').execute(interaction);
+            else if (command === 'oblava') await require('./commands/oblava.js').execute(interaction);
+            else if (command === 'chicken') await require('./commands/chicken.js').execute(interaction);
+            else if (command === 'rename') await require('./commands/rename.js').execute(interaction);
+            else if (command === 'vc_delete') await require('./commands/vc_delete.js').execute(interaction);
+            else if (command === 'send_msg') await require('./commands/send_msg.js').execute(interaction);
+            else if (command === 'send_msg_track') await require('./commands/send_msg_track.js').execute(interaction);
+            else if (command === 'send_audio') await require('./commands/send_audio.js').execute(interaction);
+
+            return; 
         }
 
-        // --- 👇 NEW: HANDLE DM REPLY BUTTON 👇 ---
-        if (interaction.isButton() && interaction.customId.startsWith('dm_reply_')) {
-            const userId = interaction.customId.replace('dm_reply_', '');
-            
-            // Create the Modal
-            const modal = new ModalBuilder()
-                .setCustomId(`dm_reply_modal_${userId}`)
-                .setTitle('Reply to User');
-
-            const messageInput = new TextInputBuilder()
-                .setCustomId('dm_message_input')
-                .setLabel('Your Message')
-                .setStyle(TextInputStyle.Paragraph) // Multi-line box
-                .setRequired(true);
-
-            const firstActionRow = new ActionRowBuilder().addComponents(messageInput);
-            modal.addComponents(firstActionRow);
-
-            await interaction.showModal(modal);
-            return;
-        }
-
-        // --- 👇 NEW: HANDLE MODAL SUBMISSION 👇 ---
-        if (interaction.isModalSubmit() && interaction.customId.startsWith('dm_reply_modal_')) {
-            const userId = interaction.customId.replace('dm_reply_modal_', '');
-            const replyContent = interaction.fields.getTextInputValue('dm_message_input');
-
-            try {
-                const targetUser = await client.users.fetch(userId);
-                await targetUser.send(`${replyContent}`);
-                
-                await interaction.reply({ 
-                    content: `✅ Reply sent to **${targetUser.tag}**: "${replyContent}"`, 
-                    ephemeral: true 
-                });
-                
-                // Optional: Log it in the channel too so other admins see you replied
-                // interaction.channel.send(`📤 **${interaction.user.tag}** replied: "${replyContent}"`);
-
-            } catch (error) {
-                console.error(error);
-                await interaction.reply({ 
-                    content: `❌ Failed to send reply. User might have blocked the bot.`, 
-                    ephemeral: true 
-                });
-            }
-            return;
-        }
-        // --- 👆 END NEW HANDLERS 👆 ---
-
-
-        // --- 2. HANDLE OTHER BUTTONS (Existing Logic) ---
+        // --- 2. HANDLE BUTTONS ---
         if (await moreButton.handleInteraction(interaction)) return;
         if (await profileButton.handleInteraction(client, interaction)) return;
         if (await healthButton.handleInteraction(client, interaction)) return;
 
-        // Music Control Buttons
+        // DM Reply Button
+        if (interaction.isButton() && interaction.customId.startsWith('dm_reply_')) {
+            const userId = interaction.customId.replace('dm_reply_', '');
+            const modal = new ModalBuilder().setCustomId(`dm_reply_modal_${userId}`).setTitle('Reply to User');
+            const messageInput = new TextInputBuilder().setCustomId('dm_message_input').setLabel('Your Message').setStyle(TextInputStyle.Paragraph).setRequired(true);
+            const row = new ActionRowBuilder().addComponents(messageInput);
+            modal.addComponents(row);
+            await interaction.showModal(modal);
+            return;
+        }
+        // DM Modal Submit
+        if (interaction.isModalSubmit() && interaction.customId.startsWith('dm_reply_modal_')) {
+            const userId = interaction.customId.replace('dm_reply_modal_', '');
+            const content = interaction.fields.getTextInputValue('dm_message_input');
+            try {
+                const user = await client.users.fetch(userId);
+                await user.send(`**Message from Garmin Admin:**\n${content}`);
+                await interaction.reply({ content: `✅ Reply sent to **${user.tag}**`, ephemeral: true });
+            } catch(e) { await interaction.reply({ content: '❌ Failed to send.', ephemeral: true }); }
+            return;
+        }
+
+        // --- MUSIC CONTROL BUTTONS ---
         if (interaction.isButton() && interaction.customId.startsWith('distube_')) {
-            // ... (Keep your existing DisTube button logic) ...
-            // Just paste your existing DisTube logic here
-             const queue = client.distube.getQueue(interaction.guildId);
-             // ... (truncated for brevity, keep your original code) ...
-             return;
+            const queue = client.distube.getQueue(interaction.guildId);
+
+            if (!queue) return interaction.reply({ content: 'Bot is not playing anything.', ephemeral: true });
+            if (interaction.member.voice.channelId !== queue.voice.channelId) {
+                return interaction.reply({ content: 'You must be in the same voice channel!', ephemeral: true });
+            }
+
+            try {
+                switch (interaction.customId) {
+                    case 'distube_pause_resume':
+                        if (queue.paused) queue.resume();
+                        else queue.pause();
+                        await interaction.deferUpdate();
+                        break;
+
+                    case 'distube_skip':
+                        if (queue.songs.length <= 1 && !queue.autoplay) {
+                            queue.stop();
+                            client.distube.voices.leave(interaction.guildId);
+                        } else {
+                            if (queue.shuffle) {
+                                try { await queue.shuffle(); } catch (err) {}
+                            }
+                            await queue.skip();
+                        }
+                        await interaction.deferUpdate();
+                        break;
+
+                    case 'distube_stop':
+                        queue.stop();
+                        client.distube.voices.leave(interaction.guildId);
+                        await interaction.deferUpdate();
+                        break;
+
+                    case 'distube_queue':
+                         const songList = queue.songs.map((song, i) => `**${i}.** [${song.name}](${song.url}) - \`${song.formattedDuration}\``).slice(0, 10).join('\n');
+                         const queueEmbed = new EmbedBuilder().setColor('#FFFFFF').setTitle('Music Queue').setDescription(songList || 'Queue is empty.').setFooter({ text: `Now Playing: ${queue.songs[0].name}` });
+                         await interaction.reply({ embeds: [queueEmbed], ephemeral: true });
+                         break;
+
+                    case 'distube_filters':
+                        // Ensure createFilterMessage is defined in index.js!
+                        const filterMessage = createFilterMessage(queue);
+                        await interaction.reply(filterMessage);
+                        break;
+                        
+                    case 'distube_mode':
+                        const currentLabel = interaction.component.label;
+                        let nextLabel = '', nextStyle = ButtonStyle.Secondary;
+                        
+                        if (currentLabel.includes('Order')) {
+                            await queue.shuffle(); 
+                            nextLabel = '🔀 Shuffle'; nextStyle = ButtonStyle.Success;
+                        } else if (currentLabel.includes('Shuffle')) {
+                            await queue.shuffle(); await queue.setRepeatMode(1); 
+                            nextLabel = '🔁 Loop'; nextStyle = ButtonStyle.Success;
+                        } else {
+                            await queue.setRepeatMode(0); 
+                            nextLabel = '➡️ Order'; nextStyle = ButtonStyle.Secondary;
+                        }
+
+                        // UI Update Logic
+                        const row1 = ActionRowBuilder.from(interaction.message.components[0]);
+                        const row2 = ActionRowBuilder.from(interaction.message.components[1]);
+                        
+                        // Safety Check: Does Row 3 exist? (It might not if using old layout)
+                        const components = [row1, row2];
+                        if (interaction.message.components[2]) {
+                            const row3 = ActionRowBuilder.from(interaction.message.components[2]);
+                            components.push(row3);
+                        }
+                        
+                        const btnIdx = row1.components.findIndex(c => c.data.custom_id === 'distube_mode');
+                        if (btnIdx !== -1) {
+                            row1.components[btnIdx].setLabel(nextLabel);
+                            row1.components[btnIdx].setStyle(nextStyle);
+                            await interaction.update({ components: components });
+                        } else { 
+                            await interaction.deferUpdate(); 
+                        }
+                        break;
+                }
+            } catch (e) { 
+                console.error("Music Button Error:", e);
+                if (!interaction.replied && !interaction.deferred) {
+                     await interaction.reply({content: "Error processing button.", ephemeral: true});
+                }
+            }
+            return;
         }
 
         // Filter Buttons
         if (interaction.isButton() && interaction.customId.startsWith('filter_')) {
-             // ... (Keep your existing Filter logic) ...
              const queue = client.distube.getQueue(interaction.guildId);
-             // ... (truncated) ...
+             if (!queue) return interaction.reply({ content: 'Bot is not playing.', ephemeral: true });
+             
+             const filterName = interaction.customId.replace('filter_', '');
+             try {
+                if (filterName === 'clear') await queue.filters.clear();
+                else {
+                    if (queue.filters.has(filterName)) await queue.filters.remove(filterName);
+                    else await queue.filters.add(filterName);
+                }
+                // Update the filter message
+                const filterMessage = createFilterMessage(queue);
+                await interaction.update(filterMessage);
+             } catch(e) { 
+                 console.error(e);
+                 if (!interaction.replied) await interaction.deferUpdate();
+             }
              return;
         }
 
@@ -1781,11 +1852,12 @@ client.on('interactionCreate', async (interaction) => {
             return;
         }
 
-        // Existing Command Buttons (Roulette, etc.)
+        // --- OLD HANDLERS ---
         if (rouletteButton && typeof rouletteButton.handleInteraction === 'function') await rouletteButton.handleInteraction(client, interaction);
         if (descriptionButton && typeof descriptionButton.handleInteraction === 'function') await descriptionButton.handleInteraction(interaction);
         if (scheduleButton && typeof scheduleButton.handleInteraction === 'function') await scheduleButton.handleInteraction(client, interaction);
         
+        // Music Button (Opens new UI)
         if (interaction.isButton() && interaction.customId === 'music') {
             const musicUI = require('./commands/music_ui.js');
             await musicUI.showSearchMode(interaction);
