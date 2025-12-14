@@ -9,6 +9,7 @@ const path = require('path');
 const { DisTube } = require('distube');
 const { SpotifyPlugin } = require('@distube/spotify');
 const { SoundCloudPlugin } = require('@distube/soundcloud');
+const { YtDlpPlugin } = require('@distube/yt-dlp');
 
 const health = require('./commands/health.js');
 const restartCommand = require('./commands/restart.js');
