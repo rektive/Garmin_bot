@@ -11,8 +11,8 @@ const fs = require('fs');
 module.exports = {
     async execute(interaction) {
 
-        const ALLOWED_GUILD_ID = '1170161251754725466';
-        if(interaction.guilf.id !== ALLOWED_GUILD_ID) {
+        const allowedID = '1170161251754725466';
+        if(interaction.guilf.id !== allowedID) {
             return interaction.reply({
                 content: 'This command is not available',
                 ephemeral: true
