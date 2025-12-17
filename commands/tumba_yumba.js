@@ -10,6 +10,14 @@ const fs = require('fs');
 
 module.exports = {
     async execute(interaction) {
+
+        const ALLOWED_GUILD_ID = '1170161251754725466';
+        if(interaction.guilf.id !== ALLOWED_GUILD_ID) {
+            return interaction.reply({
+                content: 'This command is not available',
+                ephemeral: true
+            })
+        }
         // 1. Check if user is in a voice channel
         const channel = interaction.member.voice.channel;
         if (!channel) {
