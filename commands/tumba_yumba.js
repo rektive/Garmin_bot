@@ -11,14 +11,27 @@ const fs = require('fs');
 module.exports = {
     async execute(interaction) {
 
-        const allowedID = '1170161251754725466';
-        if(interaction.guilf.id !== allowedID) {
-            return interaction.reply({
-                content: 'This command is not available',
-                ephemeral: true
-            })
+        // --- 1. SERVER RESTRICTION CHECK ---
+        const ALLOWED_GUILD_ID = process.env.GUILD_ID || '1170161251754725466';
+
+        // Check if command is used in a server (not DM)
+        if (!interaction.guild) {
+             return interaction.reply({ 
+                content: '❌ This command can only be used in a server.', 
+                ephemeral: true 
+            });
         }
-        // 1. Check if user is in a voice channel
+        
+        // Check if it is the correct server
+        // FIX: Changed 'interaction.guilf' to 'interaction.guild'
+        if (interaction.guild.id !== ALLOWED_GUILD_ID) {
+            return interaction.reply({ 
+                content: '⛔ This command is exclusive to the main server.', 
+                ephemeral: true 
+            });
+        }
+
+        // 2. Check if user is in a voice channel
         const channel = interaction.member.voice.channel;
         if (!channel) {
             return interaction.reply({ 
@@ -27,12 +40,11 @@ module.exports = {
             });
         }
 
-        // 2. Acknowledge the command silently
-        await interaction.reply({ content: 'Robot deployed...', ephemeral: true });
+        // 3. Acknowledge the command silently
+        await interaction.reply({ content: '🤖 Robot deployed...', ephemeral: true });
 
         try {
             // Path to your audio file. 
-            // Make sure you have a file named 'robot.mp3' in your intro_audio folder!
             const audioPath = path.join(__dirname, '..', 'intro_audio', 'robot.mp3');
 
             if (!fs.existsSync(audioPath)) {
@@ -40,21 +52,21 @@ module.exports = {
                 return interaction.followUp({ content: '❌ Audio file missing!', ephemeral: true });
             }
 
-            // 3. Join the Voice Channel
+            // 4. Join the Voice Channel
             const connection = joinVoiceChannel({
                 channelId: channel.id,
                 guildId: channel.guild.id,
                 adapterCreator: channel.guild.voiceAdapterCreator,
             });
 
-            // 4. Create Player & Resource
+            // 5. Create Player & Resource
             const player = createAudioPlayer();
             const resource = createAudioResource(audioPath);
 
             connection.subscribe(player);
             player.play(resource);
 
-            // 5. Handle "Finish" (Idle) Event
+            // 6. Handle "Finish" (Idle) Event
             player.on(AudioPlayerStatus.Idle, () => {
                 try {
                     // Destroy the connection (Leave) immediately after playing
