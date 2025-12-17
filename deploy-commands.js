@@ -117,6 +117,12 @@ const commands = [
         .setName('chicken')
         .setDescription('Deploys the chicken.'),
 
+    // /robot
+    new SlashCommandBuilder()
+        .setName('robot')
+        .setDescription('Deploys the robot.'),
+
+
     // 6. /rename
     new SlashCommandBuilder()
         .setName('rename')

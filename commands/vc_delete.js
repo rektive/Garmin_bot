@@ -12,30 +12,36 @@ module.exports = {
         }
 
         const guildId = interaction.guild.id;
-        const connection = getVoiceConnection(guildId);
+        let actionsTaken = [];
 
+        // 2. Kill DisTube Queue (Prevent auto-rejoin)
+        try {
+            const queue = interaction.client.distube.getQueue(guildId);
+            if (queue) {
+                queue.stop(); // Stop playing
+                queue.voices.leave(guildId); // Tell DisTube specifically to leave
+                actionsTaken.push('Stopped DisTube queue');
+            }
+        } catch (e) {
+            // Queue might not exist, ignore
+        }
+
+        // 3. Force Kill Voice Connection (The Nuclear Option)
+        const connection = getVoiceConnection(guildId);
         if (connection) {
             try {
-                // 2. Force Destroy Connection
                 connection.destroy();
-                
-                // 3. Clear DisTube Queue if it exists (to prevent "zombie" playing state)
-                const queue = interaction.client.distube.getQueue(guildId);
-                if (queue) {
-                    queue.stop();
-                }
-
-                await interaction.reply({ 
-                    content: '✅ **Voice Connection Nuked.** Forcefully disconnected the bot and cleared the queue.', 
-                    ephemeral: true 
-                });
+                actionsTaken.push('Destroyed voice connection');
             } catch (error) {
                 console.error(error);
-                await interaction.reply({ 
-                    content: '❌ Failed to destroy connection. Check console for details.', 
-                    ephemeral: true 
-                });
             }
+        }
+
+        if (actionsTaken.length > 0) {
+            await interaction.reply({ 
+                content: `✅ **Voice Nuke Successful.**\nActions: ${actionsTaken.join(', ')}.`, 
+                ephemeral: true 
+            });
         } else {
             await interaction.reply({ 
                 content: '⚠️ No active voice connection found to delete.', 

@@ -1695,6 +1695,7 @@ client.on('interactionCreate', async (interaction) => {
             else if (command === 'room') await require('./commands/room.js').execute(interaction);
             else if (command === 'oblava') await require('./commands/oblava.js').execute(interaction);
             else if (command === 'chicken') await require('./commands/chicken.js').execute(interaction);
+            else if (command === 'robot') await require('./commands/tumba_yumba.js').execute(interaction);
             else if (command === 'rename') await require('./commands/rename.js').execute(interaction);
             else if (command === 'vc_delete') await require('./commands/vc_delete.js').execute(interaction);
             else if (command === 'send_msg') await require('./commands/send_msg.js').execute(interaction);
