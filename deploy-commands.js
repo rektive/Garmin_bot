@@ -169,6 +169,18 @@ const commands = [
             option.setName('msg')
                 .setDescription('The message content')
                 .setRequired(true)),
+    //send_channel Sends custom message to the channel (Requires channels ID)
+    new SlashCommandBuilder()
+        .setName('send_channel')
+        .setDescription('Send a message to a specific channel by ID (Owner Only).')
+        .addStringOption(option => 
+            option.setName('channel_id')
+                .setDescription('The Channel ID or #Channel')
+                .setRequired(true))
+        .addStringOption(option => 
+            option.setName('msg')
+                .setDescription('The message content')
+                .setRequired(true)),
 ]
 .map(command => command.toJSON());
 

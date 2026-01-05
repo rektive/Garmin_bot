@@ -1701,6 +1701,9 @@ client.on('interactionCreate', async (interaction) => {
             else if (command === 'send_msg') await require('./commands/send_msg.js').execute(interaction);
             else if (command === 'send_msg_track') await require('./commands/send_msg_track.js').execute(interaction);
             else if (command === 'send_audio') await require('./commands/send_audio.js').execute(interaction);
+            else if (interaction.commandName === 'send_channel') {
+                await require('./commands/send_channel.js').execute(interaction);
+            }
 
             return; 
         }
