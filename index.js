@@ -1708,6 +1708,27 @@ client.on('interactionCreate', async (interaction) => {
             return; 
         }
 
+        if (interaction.isModalSubmit() && interaction.customId.startsWith('send_channel_modal_')) {
+            const channelId = interaction.customId.replace('send_channel_modal_', '');
+            const messageContent = interaction.fields.getTextInputValue('message_content');
+
+            try {
+                const targetChannel = await client.channels.fetch(channelId);
+                await targetChannel.send(messageContent);
+                
+                await interaction.reply({ 
+                    content: `✅ Message sent to **#${targetChannel.name}**!`, 
+                    ephemeral: true 
+                });
+                console.log(`[CHANNEL MSG SENT] Channel: ${targetChannel.name} (${channelId})`);
+
+            } catch (error) {
+                console.error(`Failed to send message via modal to ${channelId}:`, error);
+                await interaction.reply({ content: `❌ Failed to send message. Permissions issue?`, ephemeral: true });
+            }
+            return;
+        }
+
         // --- 2. HANDLE BUTTONS ---
         if (await moreButton.handleInteraction(interaction)) return;
         if (await profileButton.handleInteraction(client, interaction)) return;
