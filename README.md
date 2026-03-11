@@ -1,4 +1,5 @@
 Dicrod Bot - Garmin
+
 **Core Skills: Full-stack development, logic modeling, and trilingual technical communication.**
 A high-performance Discord application engineered to facilitate real-time community engagement and automated server administration. Developed using an asynchronous, event-driven architecture, this project demonstrates advanced implementation of JavaScript (Node.js) for scalable service solutions.
 
