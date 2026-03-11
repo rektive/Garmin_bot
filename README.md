@@ -22,11 +22,11 @@ Functional Modules:
 
 Implementation Details:
 
-Command Processing: Modular architecture separating core logic from individual feature modules for high maintainability.
-
-Error Handling: Comprehensive try/catch implementation to ensure graceful failure and informative logging.
-
-Event Listeners: Efficient use of event emitters to handle multiple simultaneous user interactions without blocking the main thread.
+    Command Processing: Modular architecture separating core logic from individual feature modules for high maintainability.
+    
+    Error Handling: Comprehensive try/catch implementation to ensure graceful failure and informative logging.
+    
+    Event Listeners: Efficient use of event emitters to handle multiple simultaneous user interactions without blocking the main thread.
 
 Developer:
 Nikita Zhuravlov
