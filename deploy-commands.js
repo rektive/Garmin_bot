@@ -191,14 +191,14 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
         console.log(`📦 Started refreshing ${commands.length} application (/) commands for GUILD.`);
 
         const CLIENT_ID = process.env.CLIENT_ID; 
-        const GUILD_ID = process.env.GUILD_ID; // Must be in your .env file
+        const GUILD_ID = process.env.GUILD_ID; 
 
         if (!CLIENT_ID || !GUILD_ID) {
             console.error('❌ Error: CLIENT_ID or GUILD_ID is missing from .env file.');
             return;
         }
 
-        // Send to Discord (Guild specific = Instant)
+        // Send to Discord 
         const data = await rest.put(
             Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID),
             { body: commands },
