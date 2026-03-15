@@ -1,10 +1,7 @@
-# Hides your secret token file
 .env
 
-# Hides all the installed libraries (Render will install its own)
 /node_modules
 
-# Hides your local log files
 *.log
 command_log.json
 schedules.json
